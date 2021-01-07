@@ -8,6 +8,12 @@
                 cabinetFrame.Content = _cm_men_acc
             Case "mfw"
                 cabinetFrame.Content = _cm_men_ftw
+            Case "wap"
+                cabinetFrame.Content = _cm_wom_app
+            Case "wac"
+                cabinetFrame.Content = _cm_wom_acc
+            Case "wft"
+                cabinetFrame.Content = _cm_wom_ftw
 
             Case Else
 

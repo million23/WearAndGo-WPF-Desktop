@@ -1,6 +1,6 @@
 ﻿Imports System.Xml
 
-Class cm_men_app
+Class cm_wom_app
     Private Sub resizescrollviewer(sender As Object, e As SizeChangedEventArgs)
         Dim actualH = My.Application.MainWindow.ActualHeight
         Dim actualW = My.Application.MainWindow.ActualWidth

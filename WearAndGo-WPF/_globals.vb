@@ -10,6 +10,10 @@ Module _globals
     Public _cm_men_app As New cm_men_app
     Public _cm_men_acc As New cm_men_acc
     Public _cm_men_ftw As New cm_men_ftw
+    Public _cm_wom_app As New cm_wom_app
+    Public _cm_wom_acc As New cm_wom_acc
+    Public _cm_wom_ftw As New cm_wom_ftw
+
 
     'data
     Public _itemlist_app As New XmlDocument

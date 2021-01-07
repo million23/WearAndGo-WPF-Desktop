@@ -10,7 +10,7 @@
     <Grid>
         <StackPanel Margin="16" Name="mainCard">
             <Image Name="itemImage" Height="250" />
-            <TextBlock Name="itemName" Text="Item Name" FontSize="24" TextAlignment="Center" TextWrapping="NoWrap" TextTrimming="WordEllipsis" />
+            <TextBlock Name="itemName" Margin="0 20 0 0" Text="Item Name" FontSize="24" TextAlignment="Center" TextWrapping="NoWrap" TextTrimming="WordEllipsis" />
             <TextBlock Name="itemID"  Text="Item ID" FontSize="10" TextAlignment="Center" />
             <Separator Width="200" Margin="0 25"/>
             <Grid>
@@ -19,11 +19,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0">
-                    <TextBlock Name="itemPrice" Text="Item Price" FontSize="18" TextAlignment="Center"/>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="₱ " FontSize="18"/>
+                    <TextBlock Name="itemPrice" Text="Item Price" FontSize="18" />
                 </StackPanel>
-                <StackPanel Grid.Column="1">
-                    <TextBlock Name="itemVariant" Text="Item Variant" FontSize="18" TextAlignment="Center"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Variant " FontSize="18"/>
+                    <TextBlock Name="itemVariant" Text="Item Variant" FontSize="18" />
                 </StackPanel>
             </Grid>
             <Separator Width="200" Margin="0 25"/>

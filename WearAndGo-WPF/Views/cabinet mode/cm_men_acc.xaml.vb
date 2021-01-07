@@ -4,6 +4,6 @@
         Dim actualW = My.Application.MainWindow.ActualWidth
 
         mainscrollviewer.Width = actualW
-        mainscrollviewer.Height = actualH - 80
+        mainscrollviewer.Height = actualH - 70
     End Sub
 End Class

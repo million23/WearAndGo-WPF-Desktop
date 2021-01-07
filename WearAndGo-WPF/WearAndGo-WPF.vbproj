@@ -69,8 +69,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\cabinet mode\cm_wom_ftw.xaml.vb">
+      <DependentUpon>cm_wom_ftw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\cm_wom_acc.xaml.vb">
+      <DependentUpon>cm_wom_acc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\cabinet mode\cm_men_acc.xaml.vb">
       <DependentUpon>cm_men_acc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\cm_wom_app.xaml.vb">
+      <DependentUpon>cm_wom_app.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\cabinet mode\cm_men_app.xaml.vb">
       <DependentUpon>cm_men_app.xaml</DependentUpon>
@@ -106,9 +115,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\cabinet mode\cm_wom_ftw.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\cabinet mode\cm_wom_acc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\cabinet mode\cm_men_acc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\cm_wom_app.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\cabinet mode\cm_men_app.xaml">
       <SubType>Designer</SubType>

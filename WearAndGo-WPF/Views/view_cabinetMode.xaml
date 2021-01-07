@@ -20,7 +20,7 @@
                     <ui:NavigationViewItemSeparator/>
                     <ui:NavigationViewItem Tag="wap" Content="Women's Apparel"/>
                     <ui:NavigationViewItem Tag="wac" Content="Women's Accessories"/>
-                    <ui:NavigationViewItem Tag="wfw" Content="Women's Footwear"/>
+                    <ui:NavigationViewItem Tag="wft" Content="Women's Footwear"/>
                 </ui:NavigationView.MenuItems>
                 <ui:NavigationView.FooterMenuItems>
                     <ui:NavigationViewItem Content="Exit Cabinet Mode"/>
