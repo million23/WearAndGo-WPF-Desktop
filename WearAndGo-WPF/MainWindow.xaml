@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WearAndGo_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
         
+        Loaded="pageLoad"
+        MinHeight="600" MinWidth="800"
+        FontFamily="Bahnschrift"
+        Title="Wear and Go" Background="{x:Null}">
+    <Grid>
+        <ui:Frame HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="mainFrame">
+            <ui:Frame.ContentTransitions>
+                <ui:NavigationThemeTransition>
+                    <ui:EntranceNavigationTransitionInfo/>
+                </ui:NavigationThemeTransition>
+            </ui:Frame.ContentTransitions>
+        </ui:Frame>
+
     </Grid>
 </Window>

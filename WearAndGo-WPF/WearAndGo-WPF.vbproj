@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WearAndGo_WPF</RootNamespace>
     <AssemblyName>WearAndGo-WPF</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -68,6 +69,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\cabinet mode\cm_men_acc.xaml.vb">
+      <DependentUpon>cm_men_acc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\cm_men_app.xaml.vb">
+      <DependentUpon>cm_men_app.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\cm_men_ftw.xaml.vb">
+      <DependentUpon>cm_men_ftw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\item cards\card_acc.xaml.vb">
+      <DependentUpon>card_acc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\item cards\card_app.xaml.vb">
+      <DependentUpon>card_app.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cabinet mode\item cards\card_ftw.xaml.vb">
+      <DependentUpon>card_ftw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\view_cabinetMode.xaml.vb">
+      <DependentUpon>view_cabinetMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\view_hero.xaml.vb">
+      <DependentUpon>view_hero.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_globals.vb" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +106,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\cabinet mode\cm_men_acc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\cm_men_app.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\cm_men_ftw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\item cards\card_acc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\item cards\card_app.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\cabinet mode\item cards\card_ftw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\view_cabinetMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\view_hero.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="System.Threading.Tasks" />
@@ -130,6 +188,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ModernWpfUI">
+      <Version>0.9.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\itemlist_apparel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\itemlist_accessory.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\itemlist_footwear.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
