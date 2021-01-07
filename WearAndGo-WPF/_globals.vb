@@ -5,6 +5,7 @@ Module _globals
     ' views
     Public _view_hero As New view_hero
     Public _view_cabinetMode As New view_cabinetMode
+    Public _view_yourCart As New view_yourCart
 
     'cabinet mode view
     Public _cm_men_app As New cm_men_app

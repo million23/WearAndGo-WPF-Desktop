@@ -14,6 +14,8 @@
                 cabinetFrame.Content = _cm_wom_acc
             Case "wft"
                 cabinetFrame.Content = _cm_wom_ftw
+            Case "cart"
+                cabinetFrame.Content = _view_yourCart
 
             Case Else
 

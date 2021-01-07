@@ -9,11 +9,11 @@
       MinHeight="450" MinWidth="800"
       SizeChanged="resizeWindow"
       Title="cm_men_ftw">
-    <Grid >
-        <ScrollViewer Name="mainscrollviewer" HorizontalAlignment="Stretch" MaxHeight="768" Height="Auto" MinHeight="600" ui:ScrollViewerHelper.AutoHideScrollBars="True">
+    <Grid Name="mainscrollviewer">
+        <ui:ScrollViewerEx  HorizontalAlignment="Stretch" ui:ScrollViewerHelper.AutoHideScrollBars="True">
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Name="wrapContainer">
                 
             </WrapPanel>
-        </ScrollViewer>
+        </ui:ScrollViewerEx>
     </Grid>
 </Page>

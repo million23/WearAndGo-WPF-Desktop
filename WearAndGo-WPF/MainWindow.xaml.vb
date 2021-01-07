@@ -4,6 +4,7 @@ Class MainWindow
     Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
         My.Application.MainWindow.FindName("mainFrame").content = _view_hero
 
+        'preloads all assets for the cabinet mode
         'apparel
         _cm_men_app.wrapContainer.Children.Clear()
         _itemlist_app.Load(_itemlist_app_path)

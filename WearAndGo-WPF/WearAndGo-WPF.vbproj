@@ -102,6 +102,9 @@
     <Compile Include="Views\view_hero.xaml.vb">
       <DependentUpon>view_hero.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\view_yourCart.xaml.vb">
+      <DependentUpon>view_yourCart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="_globals.vb" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\view_hero.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\view_yourCart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

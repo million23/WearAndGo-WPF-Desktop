@@ -10,11 +10,11 @@
       SizeChanged="resizeChanged"
       Title="cm_men_acc">
 
-    <Grid >
-        <ScrollViewer Name="mainscrollviewer" HorizontalAlignment="Stretch" MaxHeight="768" Height="Auto" MinHeight="600" ui:ScrollViewerHelper.AutoHideScrollBars="True">
+    <Grid Name="mainscrollviewer" >
+        <ui:ScrollViewerEx HorizontalAlignment="Stretch" ui:ScrollViewerHelper.AutoHideScrollBars="True">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Name="wrapContainer">
                 
             </WrapPanel>
-        </ScrollViewer>
+        </ui:ScrollViewerEx>
     </Grid>
 </Page>
