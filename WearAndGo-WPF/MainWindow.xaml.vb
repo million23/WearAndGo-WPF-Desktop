@@ -38,7 +38,7 @@ Class MainWindow
             End If
         Next
 
-        'men
+        'accessory
         _cm_men_acc.wrapContainer.Children.Clear()
         _itemlist_acc.Load(_itemlist_acc_path)
         Dim Macc_root As XmlNode = _itemlist_acc.DocumentElement
@@ -104,6 +104,7 @@ Class MainWindow
                 _cm_wom_ftw.wrapContainer.Children.Add(card)
             End If
         Next
+
 
 
 

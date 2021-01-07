@@ -29,7 +29,7 @@
                 </StackPanel>
             </Grid>
             <Separator Width="200" Margin="0 25"/>
-            <Button Padding="15 5" HorizontalAlignment="Stretch" Content="Add to Cart"/>
+            <Button Click="addToCart" Padding="15 5" HorizontalAlignment="Stretch" Content="Add to Cart"/>
         </StackPanel>
     </Grid>
 </UserControl>

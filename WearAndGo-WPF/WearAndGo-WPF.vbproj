@@ -96,6 +96,9 @@
     <Compile Include="Views\cabinet mode\item cards\card_ftw.xaml.vb">
       <DependentUpon>card_ftw.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\item_yourCart.xaml.vb">
+      <DependentUpon>item_yourCart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\view_cabinetMode.xaml.vb">
       <DependentUpon>view_cabinetMode.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\cabinet mode\item cards\card_ftw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\item_yourCart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -230,6 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bin\Debug\Data\itemlist_footwear.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\datalist_cart.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\datalist_salehistory.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

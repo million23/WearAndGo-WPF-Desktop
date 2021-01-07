@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="item_yourCart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WearAndGo_WPF"
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             mc:Ignorable="d" 
+             FontFamily="Bahnschrift"
+             Margin="10"
+             Height="125" MaxWidth="400" Width="auto">
+    <Grid >
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <Image Name="itemImage" Width="100" Height="125" StretchDirection="DownOnly" />
+            <StackPanel Margin="10 0" VerticalAlignment="Center" HorizontalAlignment="Stretch" Width="275">
+                <TextBlock Name="itemName" FontSize="18" Text="Item Name" TextTrimming="CharacterEllipsis" />
+                <TextBlock Name="itemID" FontSize="10" Text="Item ID"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Name="itemVariant" Text="Item Variant or Size"/>
+                    <StackPanel Orientation="Horizontal" Margin="25 0 0 0">
+                        <TextBlock Text="₱" Margin="0 0 10 0"/>
+                        <TextBlock Name="itemPrice" Text="Item Price"/>
+                    </StackPanel>
+                </StackPanel>
+                <Separator Margin="0 10"/>
+                <Button HorizontalAlignment="Right" Padding="15 5">
+                    <StackPanel Orientation="Horizontal">
+
+                        <ui:SymbolIcon Symbol="Remove" Width="15" Height="15" Margin="0 0 20 0"/>
+                        <TextBlock Text="Remove from Cart"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

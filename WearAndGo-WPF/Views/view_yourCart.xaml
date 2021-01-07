@@ -8,28 +8,39 @@
       mc:Ignorable="d"
       SizeChanged="resizeWindow"
       MinHeight="600" MinWidth="800"
+      Loaded="getCartData"
+      Margin="20"
       Title="view_hero">
-    <Grid Name="mainwindow">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+    <GroupBox Header="Your Cart" Name="mainwindow">
+        <Grid >
+            <StackPanel HorizontalAlignment="Center"  VerticalAlignment="Center">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="400"/>
+                    </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0" MinWidth="400">
-                    <ui:ScrollViewerEx>
-                        <WrapPanel Name="cartItemContainer">
-                            
-                        </WrapPanel>
-                    </ui:ScrollViewerEx>
-                </StackPanel>
-                <StackPanel Grid.Column="1" MinWidth="400" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <GroupBox Header="Transaction Commands">
-                        <Button Content="Clear All Items"/>
-                    </GroupBox>
-                </StackPanel>
-            </Grid>
-        </StackPanel>
-    </Grid>
+                    <StackPanel Grid.Column="0" Name="mainCartItemContainer" HorizontalAlignment="Center">
+                        <ui:ScrollViewerEx Name="scroller" HorizontalAlignment="Center" ui:ScrollViewerHelper.AutoHideScrollBars="True">
+                            <WrapPanel VerticalAlignment="Center" Name="cartItemContainer">
+
+                            </WrapPanel>
+                        </ui:ScrollViewerEx>
+                    </StackPanel>
+                    <StackPanel Margin="20 0" VerticalAlignment="Center" Grid.Column="1" >
+                        <GroupBox Header="Transaction Summary">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Total Sum: "/>
+                                <TextBlock Name="cart_sum" FontSize="24" Text="Sum of all Items"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <Separator Margin="20 20"/>
+                        <GroupBox Header="Transaction Commands">
+                            <Button Content="Clear All Items"/>
+                        </GroupBox>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </GroupBox>
 </Page>
