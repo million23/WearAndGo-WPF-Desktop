@@ -6,7 +6,7 @@ Class cm_wom_app
         Dim actualW = My.Application.MainWindow.ActualWidth
 
         mainscrollviewer.Width = actualW
-        mainscrollviewer.Height = actualH - 40
+        mainscrollviewer.Height = actualH - 80
     End Sub
 
     Private Sub getData(sender As Object, e As RoutedEventArgs)

@@ -244,5 +244,8 @@
   <ItemGroup>
     <Resource Include="bin\Debug\Data\datalist_salehistory.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Data\datalist_users.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

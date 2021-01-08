@@ -34,9 +34,12 @@ Public Class card_app
                         item.Attributes.Append(gender)
                         item.Attributes.Append(id)
 
+                        itemList_item("stock").InnerXml = CInt(itemList_item("stock").InnerXml) - 1
+
                         cart_root.AppendChild(item)
 
                         _datalist_cart.Save(_datalist_cart_path)
+                        _itemlist_app.Save(_itemlist_app_path)
 
                         Exit For
 

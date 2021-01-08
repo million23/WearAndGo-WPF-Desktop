@@ -25,6 +25,8 @@ Module _globals
     Public _itemlist_ftw_path As String = "Data/itemlist_footwear.xml"
     Public _datalist_cart As New XmlDocument
     Public _datalist_cart_path As String = "Data/datalist_cart.xml"
+    Public _datalist_history As New XmlDocument
+    Public _datalist_history_path As String = "Data/datalist_salehistory.xml"
 
 
 

@@ -1,4 +1,5 @@
 ﻿Imports System.Xml
+Imports ModernWpf.Controls
 
 Class view_yourCart
 
@@ -9,7 +10,7 @@ Class view_yourCart
         Dim actualW = My.Application.MainWindow.ActualWidth
 
         mainwindow.Width = actualW
-        mainwindow.Height = actualH - 80
+        mainwindow.Height = actualH - 120
         scroller.Height = actualH - 140
     End Sub
 
@@ -190,7 +191,147 @@ Class view_yourCart
 
     End Sub
 
-    Private Sub ClearCart(sender As Object, e As RoutedEventArgs)
+    Private Async Sub ClearCart(sender As Object, e As RoutedEventArgs)
+        Dim dialog As New ContentDialog
+        dialog.Title = "Your Cart"
+        dialog.Content = "Would you like to remove this from your cart?"
+        dialog.DefaultButton = ContentDialogButton.Close
+        dialog.PrimaryButtonText = "Yes"
+        dialog.CloseButtonText = "No"
 
+        'load all database
+        _itemlist_app.Load(_itemlist_app_path)
+        _itemlist_acc.Load(_itemlist_acc_path)
+        _itemlist_ftw.Load(_itemlist_ftw_path)
+        Dim root_app As XmlNode = _itemlist_app.DocumentElement
+        Dim root_acc As XmlNode = _itemlist_acc.DocumentElement
+        Dim root_ftw As XmlNode = _itemlist_ftw.DocumentElement
+
+        'show prompt if wanted to delete all item
+        Dim result As ContentDialogResult = Await dialog.ShowAsync
+
+        'check if the user prompts to YES to delete all item
+        If result = ContentDialogResult.Primary Then
+            ' loads cart data
+            _datalist_cart.Load(_datalist_cart_path)
+            Dim cartRoot As XmlNode = _datalist_cart.DocumentElement
+
+            'restock all items
+            For Each item As XmlNode In cartRoot
+                'loop all items to retrieve stock
+                ' ' apparel
+                If item.Attributes(0).Value = "app" Then
+                    For Each appItem As XmlNode In root_app
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                            appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                            appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+                ' ' accessory
+                If item.Attributes(0).Value = "acc" Then
+                    For Each appItem As XmlNode In root_acc
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                            appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                            appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+                ' ' footwear
+                If item.Attributes(0).Value = "ftw" Then
+                    For Each appItem As XmlNode In root_ftw
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                            appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                            appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+            Next
+
+            'remove all cart items
+            cartRoot.RemoveAll()
+
+
+            'save the database
+            _datalist_cart.Save(_datalist_cart_path)
+            _itemlist_app.Save(_itemlist_app_path)
+            _itemlist_acc.Save(_itemlist_acc_path)
+            _itemlist_ftw.Save(_itemlist_ftw_path)
+
+            'reload the window
+            _view_yourCart.getCartData(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Async Sub checkout(sender As Object, e As RoutedEventArgs)
+        Dim dialog As New ContentDialog
+        dialog.Title = "Your Cart"
+        dialog.Content = "Would you like proceed to Checkout?"
+        dialog.DefaultButton = ContentDialogButton.Close
+        dialog.PrimaryButtonText = "Yes"
+        dialog.CloseButtonText = "No"
+
+        'make reference ID
+        Dim timestamp As String = Now.Year.ToString + "Y" + Now.Month.ToString + "M" + Now.Day.ToString + "D"
+        Randomize()
+        Dim ID_int As Integer = Int(Rnd() * 999999999) + 111111111
+        Dim referenceID As String = timestamp + "_" + ID_int.ToString
+
+        'show prompt if wanted to checkout
+        Dim result As ContentDialogResult = Await dialog.ShowAsync
+
+        'check if the user prompts to YES to checkout
+        If result = ContentDialogResult.Primary Then
+            ' loads cart and sale history data
+            _datalist_cart.Load(_datalist_cart_path)
+            _datalist_history.Load(_datalist_history_path)
+            Dim cartRoot As XmlNode = _datalist_cart.DocumentElement
+            Dim historyRoot As XmlNode = _datalist_history.DocumentElement
+
+            Dim sales As XmlNode = _datalist_history.CreateElement("sale")
+            Dim sales_date As XmlAttribute = _datalist_history.CreateAttribute("date")
+            Dim sales_id As XmlAttribute = _datalist_history.CreateAttribute("id")
+            Dim sales_sum As XmlAttribute = _datalist_history.CreateAttribute("totalSale")
+
+            sales_date.Value = Now.ToShortDateString + "_" + Now.ToShortTimeString
+            sales_id.Value = referenceID
+            sales_sum.Value = totalSum.ToString
+
+            sales.Attributes.Append(sales_date)
+            sales.Attributes.Append(sales_id)
+            sales.Attributes.Append(sales_sum)
+
+            For Each cartItem As XmlNode In cartRoot
+                Dim item As XmlNode = _datalist_history.CreateElement("item")
+                Dim itemCategory As XmlNode = _datalist_history.CreateAttribute("category")
+                Dim itemGender As XmlNode = _datalist_history.CreateAttribute("gender")
+                Dim itemID As XmlNode = _datalist_history.CreateAttribute("id")
+
+                itemCategory.Value = cartItem.Attributes(0).Value
+                itemGender.Value = cartItem.Attributes(1).Value
+                itemID.Value = cartItem.Attributes(2).Value
+
+                item.Attributes.Append(itemCategory)
+                item.Attributes.Append(itemGender)
+                item.Attributes.Append(itemID)
+
+                sales.AppendChild(item)
+            Next
+
+            historyRoot.AppendChild(sales)
+
+            _datalist_history.Save(_datalist_history_path)
+
+
+        End If
     End Sub
 End Class

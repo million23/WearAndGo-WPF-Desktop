@@ -5,6 +5,7 @@ Public Class item_yourCart
 
     Public ID, category, gender As String
 
+
     Private Async Sub removeFromCart(sender As Object, e As RoutedEventArgs)
         Dim dialog As New ContentDialog
         dialog.Title = "Your Cart"
@@ -12,6 +13,13 @@ Public Class item_yourCart
         dialog.DefaultButton = ContentDialogButton.Close
         dialog.PrimaryButtonText = "Yes"
         dialog.CloseButtonText = "No"
+
+        _itemlist_app.Load(_itemlist_app_path)
+        _itemlist_acc.Load(_itemlist_acc_path)
+        _itemlist_ftw.Load(_itemlist_ftw_path)
+        Dim root_app As XmlNode = _itemlist_app.DocumentElement
+        Dim root_acc As XmlNode = _itemlist_acc.DocumentElement
+        Dim root_ftw As XmlNode = _itemlist_ftw.DocumentElement
 
         'show prompt if wanted to delete item
         Dim result As ContentDialogResult = Await dialog.ShowAsync
@@ -30,14 +38,55 @@ Public Class item_yourCart
                         item.Attributes(2).Value = ID Then
                     'remove this child if matched
                     item.ParentNode.RemoveChild(item)
+
+
+                    'loop all items to retrieve stock
+                    ' ' apparel
+                    If category = "app" Then
+                        For Each appItem As XmlNode In root_app
+                            If appItem.Attributes(0).Value = category AndAlso
+                            appItem.Attributes(1).Value = gender AndAlso
+                            appItem.Attributes(2).Value = ID Then
+                                appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                            End If
+                        Next
+                    End If
+
+                    ' ' accessory
+                    If category = "acc" Then
+                        For Each appItem As XmlNode In root_acc
+                            If appItem.Attributes(0).Value = category AndAlso
+                                appItem.Attributes(1).Value = gender AndAlso
+                                appItem.Attributes(2).Value = ID Then
+                                appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                            End If
+                        Next
+                    End If
+
+                    ' ' footwear
+                    If category = "ftw" Then
+                        For Each appItem As XmlNode In root_ftw
+                            If appItem.Attributes(0).Value = category AndAlso
+                            appItem.Attributes(1).Value = gender AndAlso
+                            appItem.Attributes(2).Value = ID Then
+                                appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                            End If
+                        Next
+                    End If
                 End If
             Next
 
+
             'save the database
             _datalist_cart.Save(_datalist_cart_path)
+            _itemlist_app.Save(_itemlist_app_path)
+            _itemlist_acc.Save(_itemlist_acc_path)
+            _itemlist_ftw.Save(_itemlist_ftw_path)
 
             'reload the window
             _view_yourCart.getCartData(Nothing, Nothing)
+
+
         End If
 
     End Sub
