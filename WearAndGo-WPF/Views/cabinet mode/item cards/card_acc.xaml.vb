@@ -34,6 +34,7 @@ Public Class card_acc
                         item.Attributes.Append(gender)
                         item.Attributes.Append(id)
 
+
                         cart_root.AppendChild(item)
 
                         _datalist_cart.Save(_datalist_cart_path)
