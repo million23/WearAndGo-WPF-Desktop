@@ -38,6 +38,7 @@ Class view_yourCart
 
         'loop thru cart items
         For Each item_cart As XmlNode In root_cart
+
             'check if cart item is men's apparel
             If item_cart.Attributes(0).Value = "app" AndAlso item_cart.Attributes(1).Value = "men" Then
                 For Each item_app As XmlNode In root_app
@@ -61,6 +62,7 @@ Class view_yourCart
                     End If
                 Next
             End If
+
             'check if cart item is women's apparel
             If item_cart.Attributes(0).Value = "app" AndAlso item_cart.Attributes(1).Value = "wom" Then
                 For Each item_app As XmlNode In root_app
@@ -84,6 +86,7 @@ Class view_yourCart
                     End If
                 Next
             End If
+
             'check if cart item is men's accessory
             If item_cart.Attributes(0).Value = "acc" AndAlso item_cart.Attributes(1).Value = "men" Then
                 For Each item_acc As XmlNode In root_acc
@@ -107,6 +110,7 @@ Class view_yourCart
                     End If
                 Next
             End If
+
             'check if cart item is women's accessory
             If item_cart.Attributes(0).Value = "acc" AndAlso item_cart.Attributes(1).Value = "wom" Then
                 For Each item_acc As XmlNode In root_acc
@@ -130,6 +134,7 @@ Class view_yourCart
                     End If
                 Next
             End If
+
             'check if cart item is men's footwear
             If item_cart.Attributes(0).Value = "ftw" AndAlso item_cart.Attributes(1).Value = "men" Then
                 For Each item_acc As XmlNode In root_ftw
@@ -153,6 +158,7 @@ Class view_yourCart
                     End If
                 Next
             End If
+
             'check if cart item is women's footwear
             If item_cart.Attributes(0).Value = "ftw" AndAlso item_cart.Attributes(1).Value = "wom" Then
                 For Each item_acc As XmlNode In root_ftw
@@ -176,9 +182,15 @@ Class view_yourCart
                     End If
                 Next
             End If
+
         Next
 
+        'write the total sum to UI
         cart_sum.Text = totalSum.ToString
+
+    End Sub
+
+    Private Sub ClearCart(sender As Object, e As RoutedEventArgs)
 
     End Sub
 End Class
