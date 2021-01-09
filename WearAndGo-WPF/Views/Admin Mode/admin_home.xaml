@@ -1,0 +1,53 @@
+﻿<Page x:Class="admin_home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WearAndGo_WPF"
+      mc:Ignorable="d"
+      Loaded="getData"
+      Title="admin_home"
+      MinHeight="536" MinWidth="1024">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock FontSize="42" Text="Welcome to Wear and Go - Admin Mode" TextAlignment="Center"/>
+            <Separator Margin="0 20" Width="500"/>
+            <TextBlock FontSize="24" Name="nameLabel" Text="Hello User!" TextAlignment="Center"/>
+            <TextBlock FontSize="32" Name="timeLabel" Text="Today is January 1 2021" TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <GroupBox Margin="50" Header="Recent Sale" VerticalAlignment="Stretch" >
+                <StackPanel Margin="20 0 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="0 5">
+                        <TextBlock Text="Transaction ID" FontSize="18" Width="200"/>
+                        <TextBlock Name="recent_id" Text="ID" FontSize="18" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 5">
+                        <TextBlock Text="Transaction Date" FontSize="18" Width="200" />
+                        <TextBlock Name="recent_date" Text="Date" FontSize="18"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 5">
+                        <TextBlock Text="Total Sum" FontSize="18" Width="200" />
+                        <TextBlock Name="recent_total" Text="Total Sales" FontSize="18"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 5">
+                        <TextBlock Text="Bought Items Count" FontSize="18" Width="200" />
+                        <TextBlock Name="recent_itemCount" Text="Item Count" FontSize="18"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Total sales here"/>
+        </StackPanel>
+    </Grid>
+</Page>

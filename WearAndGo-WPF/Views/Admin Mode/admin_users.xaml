@@ -1,0 +1,39 @@
+﻿<Page x:Class="admin_users"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WearAndGo_WPF"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      mc:Ignorable="d"
+      Loaded="getData"
+      Title="admin_users"
+      MinHeight="536" MinWidth="1024">
+    <ui:SplitView Name="sidepane" PanePlacement="Right" OpenPaneLength="450">
+
+        <ui:SplitView.Pane>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <ui:Frame Name="sidepaneFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </StackPanel>
+        </ui:SplitView.Pane>
+        
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ui:SimpleStackPanel Orientation="Vertical">
+
+                <ui:CommandBar>
+                    <ui:AppBarButton Icon="remove" Label="Remove Account" Click="removeAccount"/>
+                    <ui:AppBarButton Icon="add" Label="Add Account" Click="addAccount"/>
+                    <ui:AppBarButton Icon="edit" Label="Edit Account" Click="editAccount"/>
+                    <ui:CommandBar.Content>
+                        <TextBlock Text="Add, Remove, Edit Accounts" Margin="12 12"/>
+                    </ui:CommandBar.Content>
+                </ui:CommandBar>
+                <StackPanel>
+                    <DataGrid ui:ScrollViewerHelper.AutoHideScrollBars="True" CanUserResizeRows="False" Name="mainGrid" ColumnHeaderHeight="50" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ColumnWidth="auto" ItemsSource="{Binding Users}">
+
+                    </DataGrid>
+                </StackPanel>
+            </ui:SimpleStackPanel>
+        </Grid>
+    </ui:SplitView>
+</Page>

@@ -59,5 +59,23 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend ReadOnly Property activeUser() As String
+            Get
+                Return ResourceManager.GetString("activeUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend ReadOnly Property activeUser_type() As String
+            Get
+                Return ResourceManager.GetString("activeUser_type", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

@@ -69,6 +69,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Admin Mode\admin_home.xaml.vb">
+      <DependentUpon>admin_home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\admin_users.xaml.vb">
+      <DependentUpon>admin_users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\Users Window\admin_users_sidepane_editAccount.xaml.vb">
+      <DependentUpon>admin_users_sidepane_editAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\Users Window\admin_users_sidepane_removeAccount .xaml.vb">
+      <DependentUpon>admin_users_sidepane_removeAccount .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\Users Window\admin_users_sidepane_addAccount.xaml.vb">
+      <DependentUpon>admin_users_sidepane_addAccount.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\cabinet mode\cm_wom_ftw.xaml.vb">
       <DependentUpon>cm_wom_ftw.xaml</DependentUpon>
     </Compile>
@@ -99,6 +114,9 @@
     <Compile Include="Views\item_yourCart.xaml.vb">
       <DependentUpon>item_yourCart.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\view_adminMode.xaml.vb">
+      <DependentUpon>view_adminMode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\view_cabinetMode.xaml.vb">
       <DependentUpon>view_cabinetMode.xaml</DependentUpon>
     </Compile>
@@ -121,6 +139,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Admin Mode\admin_home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin Mode\admin_users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin Mode\Users Window\admin_users_sidepane_editAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin Mode\Users Window\admin_users_sidepane_removeAccount .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin Mode\Users Window\admin_users_sidepane_addAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\cabinet mode\cm_wom_ftw.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -158,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\item_yourCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\view_adminMode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,13 +281,23 @@
     <Resource Include="bin\Debug\Data\itemlist_footwear.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\Data\datalist_cart.xml" />
+    <Resource Include="bin\Debug\Data\datalist_cart.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\Data\datalist_salehistory.xml" />
+    <Resource Include="bin\Debug\Data\datalist_salehistory.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\Data\datalist_users.xml" />
+    <Resource Include="bin\Debug\Data\datalist_users.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\artur-matosyan-nlciawq8vC4-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

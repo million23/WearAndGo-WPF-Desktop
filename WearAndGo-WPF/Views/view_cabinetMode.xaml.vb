@@ -1,5 +1,9 @@
 ﻿Class view_cabinetMode
 
+    Private Sub resizeWindow(sender As Object, e As SizeChangedEventArgs)
+
+    End Sub
+
     Private Sub selectedPane(sender As ModernWpf.Controls.NavigationView, args As ModernWpf.Controls.NavigationViewItemInvokedEventArgs)
         Select Case mainNav.SelectedItem.Tag
             Case "map"
@@ -25,4 +29,5 @@
     Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
         cabinetFrame.Navigate(_view_yourCart)
     End Sub
+
 End Class

@@ -52,6 +52,30 @@ Partial Friend NotInheritable Class MySettings
             Return defaultInstance
         End Get
     End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property activeUser() As String
+        Get
+            Return CType(Me("activeUser"),String)
+        End Get
+        Set
+            Me("activeUser") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+    Public Property activeUserType() As String
+        Get
+            Return CType(Me("activeUserType"),String)
+        End Get
+        Set
+            Me("activeUserType") = value
+        End Set
+    End Property
 End Class
 
 Namespace My
