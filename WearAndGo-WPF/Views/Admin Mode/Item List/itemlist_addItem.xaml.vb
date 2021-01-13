@@ -29,11 +29,12 @@ Public Class itemlist_addItem
     End Sub
 
     Private Sub InputData()
-        Dim dialog As New ModernWpf.Controls.ContentDialog
+        Dim dialog As New Notifications.Wpf.NotificationManager
 
         Select Case in_itemCategory.Text
             Case "Apparel"
                 label_itemvariant.Content = "Item Size"
+                in_itemVariant.MaxLength = 3
                 Try
                     _itemlist_app.Load(_itemlist_app_path)
                     Dim root As XmlNode = _itemlist_app.DocumentElement
@@ -89,10 +90,11 @@ Public Class itemlist_addItem
                     _itemlist_app.Save(_itemlist_app_path)
                     _itemlist_getDatatable()
 
-                    dialog.Title = "Item Added"
-                    dialog.Content = "Your item has been added to database"
-                    dialog.CloseButtonText = "Great!"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "This item has been added to the database"
+                    content.Type = Notifications.Wpf.NotificationType.Success
+                    dialog.Show(content)
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -101,20 +103,20 @@ Public Class itemlist_addItem
                     in_itemPrice.Text = ""
                     in_itemVariant.Text = ""
 
-                    dialog.ShowAsync()
                 Catch ex As Exception
 
-                    dialog.Title = "Script Error"
-                    dialog.Content = "Please input all the fields"
-                    dialog.CloseButtonText = "Ok"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
 
-                    dialog.ShowAsync()
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "Something went wrong, try again or contact the administrator"
+                    content.Type = Notifications.Wpf.NotificationType.Error
+                    dialog.Show(content)
                     Exit Select
                 End Try
 
             Case "Accessory"
                 label_itemvariant.Content = "Item Variant"
+                in_itemVariant.MaxLength = 9999
                 Try
                     _itemlist_acc.Load(_itemlist_acc_path)
                     Dim root As XmlNode = _itemlist_acc.DocumentElement
@@ -129,9 +131,9 @@ Public Class itemlist_addItem
                     End Select
                     Select Case in_itemGender.Text
                         Case "Men"
-                            _itemid = "MP1" + _itemid
+                            _itemid = "MP2" + _itemid
                         Case "Women"
-                            _itemid = "WP1" + _itemid
+                            _itemid = "WP2" + _itemid
                     End Select
                     Dim _itemprice As String = in_itemPrice.Text
                     Dim _itemvariant As String = in_itemVariant.Text
@@ -145,7 +147,7 @@ Public Class itemlist_addItem
                     Dim node_name As XmlNode = _itemlist_acc.CreateElement("name")
                     Dim node_price As XmlNode = _itemlist_acc.CreateElement("price")
                     Dim node_image As XmlNode = _itemlist_acc.CreateElement("image")
-                    Dim node_variant As XmlNode = _itemlist_acc.CreateElement("variant")
+                    Dim node_variant As XmlNode = _itemlist_acc.CreateElement("desc")
                     Dim node_stock As XmlNode = _itemlist_acc.CreateElement("stock")
 
                     node_category.Value = "acc"
@@ -170,10 +172,11 @@ Public Class itemlist_addItem
                     _itemlist_acc.Save(_itemlist_acc_path)
                     _itemlist_getDatatable()
 
-                    dialog.Title = "Item Added"
-                    dialog.Content = "Your item has been added to database"
-                    dialog.CloseButtonText = "Great!"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "This item has been added to the database"
+                    content.Type = Notifications.Wpf.NotificationType.Success
+                    dialog.Show(content)
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -182,14 +185,14 @@ Public Class itemlist_addItem
                     in_itemPrice.Text = ""
                     in_itemVariant.Text = ""
 
-                    dialog.ShowAsync()
                 Catch ex As Exception
 
-                    dialog.Title = "Script Error"
-                    dialog.Content = "Please input all the fields"
-                    dialog.CloseButtonText = "Ok"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
-                    dialog.ShowAsync()
+
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "Something went wrong, try again or contact the administrator"
+                    content.Type = Notifications.Wpf.NotificationType.Error
+                    dialog.Show(content)
                     Exit Select
                 End Try
 
@@ -210,9 +213,9 @@ Public Class itemlist_addItem
                     End Select
                     Select Case in_itemGender.Text
                         Case "Men"
-                            _itemid = "MP1" + _itemid
+                            _itemid = "MP3" + _itemid
                         Case "Women"
-                            _itemid = "WP1" + _itemid
+                            _itemid = "WP3" + _itemid
                     End Select
                     Dim _itemprice As String = in_itemPrice.Text
                     Dim _itemvariant As String = in_itemVariant.Text
@@ -251,10 +254,11 @@ Public Class itemlist_addItem
                     _itemlist_ftw.Save(_itemlist_ftw_path)
                     _itemlist_getDatatable()
 
-                    dialog.Title = "Item Added"
-                    dialog.Content = "Your item has been added to database"
-                    dialog.CloseButtonText = "Great!"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "This item has been added to the database"
+                    content.Type = Notifications.Wpf.NotificationType.Success
+                    dialog.Show(content)
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -263,20 +267,21 @@ Public Class itemlist_addItem
                     in_itemPrice.Text = ""
                     in_itemVariant.Text = ""
 
-                    dialog.ShowAsync()
                 Catch ex As Exception
 
-                    dialog.Title = "Script Error"
-                    dialog.Content = "Please input all the fields"
-                    dialog.CloseButtonText = "Ok"
-                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    Dim content As New Notifications.Wpf.NotificationContent
+                    content.Title = "Inventory"
+                    content.Message = "Something went wrong, try again or contact the administrator"
+                    content.Type = Notifications.Wpf.NotificationType.Error
+                    dialog.Show(content)
 
-                    dialog.ShowAsync()
                     Exit Select
                 End Try
 
         End Select
 
+
+        _admin_itemList.sidepane.IsPaneOpen = False
 
     End Sub
 
@@ -284,8 +289,10 @@ Public Class itemlist_addItem
         Select Case in_itemCategory.SelectedIndex
             Case 1
                 label_itemvariant.Content = "Item Variant"
+                in_itemVariant.MaxLength = 999
             Case Else
                 label_itemvariant.Content = "Item Size"
+                in_itemVariant.MaxLength = 3
         End Select
     End Sub
 End Class

@@ -12,9 +12,6 @@ Class view_loadingScreen
         AddHandler timerDis.Tick, AddressOf timerTicks
         timerDis.Start()
 
-
-
-
     End Sub
 
     Private Sub timerTicks()

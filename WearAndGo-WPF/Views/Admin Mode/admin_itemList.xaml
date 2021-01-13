@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WearAndGo_WPF"
       xmlns:ui="http://schemas.modernwpf.com/2019"
+      xmlns:notifications="clr-namespace:Notifications.Wpf.Controls;assembly=Notifications.Wpf"
       mc:Ignorable="d"
       
       SizeChanged="resizeWindow"
@@ -20,6 +21,7 @@
         </ui:SplitView.Pane>
         
         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <notifications:NotificationArea x:Name="NotifArea" Position="BottomLeft" MaxItems="3"/>
             <ui:SimpleStackPanel  Orientation="Vertical">
 
                 <ui:CommandBar >

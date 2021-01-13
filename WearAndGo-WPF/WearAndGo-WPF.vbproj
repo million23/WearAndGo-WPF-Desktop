@@ -78,6 +78,9 @@
     <Compile Include="Views\Admin Mode\admin_users.xaml.vb">
       <DependentUpon>admin_users.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin Mode\Item List\itemlist_removeItem.xaml.vb">
+      <DependentUpon>itemlist_removeItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin Mode\Item List\itemlist_addItem.xaml.vb">
       <DependentUpon>itemlist_addItem.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
     <Page Include="Views\Admin Mode\admin_users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin Mode\Item List\itemlist_removeItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Admin Mode\Item List\itemlist_addItem.xaml">
       <SubType>Designer</SubType>

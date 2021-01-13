@@ -29,6 +29,7 @@ Module _globals
     Public _admin_users_sidepane_editAccount As New admin_users_sidepane_editAccount
     'inventory window
     Public _admin_inventory_sidepane_itemlist_addItem As New itemlist_addItem
+    Public _admin_inventory_sidepane_itemlist_removeItem As New itemlist_removeItem
 
     'data
     Public _itemlist_app As New XmlDocument

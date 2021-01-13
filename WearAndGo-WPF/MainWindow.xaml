@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WearAndGo_WPF"
         mc:Ignorable="d"
+        xmlns:notifications="clr-namespace:Notifications.Wpf.Controls;assembly=Notifications.Wpf"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
         WindowStartupLocation="CenterScreen"
@@ -13,6 +14,7 @@
         FontFamily="Bahnschrift"
         Title="Wear and Go" Background="{x:Null}">
     <Grid>
+        <notifications:NotificationArea x:Name="NotificationArea" Position="BottomRight" MaxItems="3"/>
         <ui:Frame HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="mainFrame">
             <ui:Frame.ContentTransitions>
                 <ui:NavigationThemeTransition>
