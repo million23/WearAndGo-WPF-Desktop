@@ -1,0 +1,72 @@
+<itemList>
+  <item category="app" gender="men" id="MP1001">
+    <name>Mens Nilan Crew Sweat Charcoal Marl</name>
+    <price>450</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/NilanCharcoal2_500x.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="men" id="MP1002">
+    <name>Mens Nilan Crew Sweat Black</name>
+    <price>450</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/NilanBlack2_500x.jpg</image>
+    <size>M</size>
+    <stock>98</stock>
+  </item>
+  <item category="app" gender="men" id="MP1003">
+    <name>Mens Queens Long Sleeve T-Shirt 2 Pack Charcoal Marl/Grey Marl</name>
+    <price>650</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/QueensCharcoal1_500x.jpg</image>
+    <size>M</size>
+    <stock>98</stock>
+  </item>
+  <item category="app" gender="men" id="MP1004">
+    <name>Mens Ossett Crew Sweat Grey Marl</name>
+    <price>450</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/OssettGrey303_500x.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="men" id="MP1005">
+    <name>Mens Ossett Crew Sweat Navy</name>
+    <price>450</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/OssettNavy332_500x.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="wom" id="WP1001">
+    <name>Turtle Neck Short Sleeve Tee</name>
+    <price>450</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/beff4985b56e3afdbeabfc89641a4582/y/t/ytf2122go3_45.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="wom" id="WP1002">
+    <name>Graphic Tee</name>
+    <price>400</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/t/ytf2165or3_45.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="wom" id="WP1003">
+    <name>Cropped Short Sleeve Tee</name>
+    <price>450</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/o/you0223pi3_45.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="wom" id="WP1004">
+    <name>Camouflage Jacket</name>
+    <price>1,500</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/w/ywh0194gy3_45.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+  <item category="app" gender="wom" id="WP1005">
+    <name>Denim Jacket</name>
+    <price>1,300</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/j/yjl0012db4.jpg</image>
+    <size>M</size>
+    <stock>99</stock>
+  </item>
+</itemList>

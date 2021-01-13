@@ -1,0 +1,16 @@
+<saleHistory>
+  <sale date="1/8/2021_12:47 PM" id="2021Y1M8D_720101000" totalSale="500">
+    <item category="acc" gender="men" id="MP2001" />
+    <item category="acc" gender="men" id="MP2002" />
+  </sale>
+  <sale date="1/8/2021_12:47 PM" id="2021Y1M8D_724693896" totalSale="900">
+    <item category="app" gender="men" id="MP1001" />
+    <item category="app" gender="men" id="MP1002" />
+  </sale>
+  <sale date="1/8/2021_6:15 PM" id="2021Y1M8D_827431304" totalSale="450">
+    <item category="app" gender="men" id="MP1001" />
+  </sale>
+  <sale date="1/8/2021_6:37 PM" id="2021Y1M8D_425830920" totalSale="650">
+    <item category="app" gender="men" id="MP1003" />
+  </sale>
+</saleHistory>

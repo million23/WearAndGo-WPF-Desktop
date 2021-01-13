@@ -1,0 +1,58 @@
+<itemList>
+  <item category="acc" gender="men" id="MP2001">
+    <name>Wesson Cap High Rise</name>
+    <price>250</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09668_large.jpg</image>
+    <desc>M</desc>
+    <stock>97</stock>
+  </item>
+  <item category="acc" gender="men" id="MP2002">
+    <name>Wesson Cap Burnt Olive</name>
+    <price>250</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09667_large.jpg</image>
+    <desc>M</desc>
+    <stock>96</stock>
+  </item>
+  <item category="acc" gender="men" id="MP2003">
+    <name>Wesson Cap Black</name>
+    <price>250</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09665_large.jpg</image>
+    <desc>M</desc>
+    <stock>99</stock>
+  </item>
+  <item category="acc" gender="men" id="MP2004">
+    <name>Mykonos Bucket Hat Khaki</name>
+    <price>250</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09656_large.jpg</image>
+    <desc>M</desc>
+    <stock>99</stock>
+  </item>
+  <item category="acc" gender="men" id="MP2005">
+    <name>Mykonos Bucket Hat Camo</name>
+    <price>250</price>
+    <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09658_large.jpg</image>
+    <desc>M</desc>
+    <stock>99</stock>
+  </item>
+  <item category="acc" gender="wom" id="WP2001">
+    <name>Cosmetic Pouch</name>
+    <price>100</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/g/ygg0108re3_45.jpg</image>
+    <desc>M</desc>
+    <stock>99</stock>
+  </item>
+  <item category="acc" gender="wom" id="WP2002">
+    <name>Cosmetic Case</name>
+    <price>180</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/y/g/ygc0657bu3_45.jpg</image>
+    <desc>Blue</desc>
+    <stock>99</stock>
+  </item>
+  <item category="acc" gender="wom" id="WP2003">
+    <name>Gadget Case</name>
+    <price>280</price>
+    <image>https://shop.bench.com.ph/pub/media/catalog/product/cache/image/564x660/beff4985b56e3afdbeabfc89641a4582/b/g/bgh0018br3.jpg</image>
+    <desc>Bronze</desc>
+    <stock>99</stock>
+  </item>
+</itemList>
