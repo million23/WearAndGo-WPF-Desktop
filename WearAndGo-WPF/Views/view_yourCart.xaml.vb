@@ -269,6 +269,16 @@ Class view_yourCart
 
             'reload the window
             _view_yourCart.getCartData(Nothing, Nothing)
+
+            'feedback to user
+            Dim notification As New Notifications.Wpf.NotificationManager
+            Dim notificationContent As New Notifications.Wpf.NotificationContent
+
+            notificationContent.Title = "Your Cart"
+            notificationContent.Message = "All of your cart content has been removed"
+            notificationContent.Type = Notifications.Wpf.NotificationType.Error
+
+            notification.Show(notificationContent)
         End If
     End Sub
 

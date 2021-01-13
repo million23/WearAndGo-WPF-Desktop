@@ -284,9 +284,14 @@
     <PackageReference Include="ModernWpfUI">
       <Version>0.9.2</Version>
     </PackageReference>
+    <PackageReference Include="Notifications.Wpf">
+      <Version>0.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\Data\itemlist_apparel.xml" />
+    <Resource Include="bin\Debug\Data\itemlist_apparel.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bin\Debug\Data\itemlist_accessory.xml" />

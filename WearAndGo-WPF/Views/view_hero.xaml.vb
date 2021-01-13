@@ -1,5 +1,7 @@
 ﻿Imports System.Xml
+Imports System.Media
 Imports ModernWpf.Controls
+Imports Notifications.Wpf
 
 Class view_hero
     Private Sub cabinetMode(sender As Object, e As RoutedEventArgs)
@@ -35,6 +37,10 @@ Class view_hero
                 Exit For
             End If
         Next
+
+    End Sub
+
+    Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
 
     End Sub
 End Class

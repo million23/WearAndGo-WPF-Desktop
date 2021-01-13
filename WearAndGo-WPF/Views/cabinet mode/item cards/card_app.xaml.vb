@@ -50,5 +50,14 @@ Public Class card_app
             End Try
         End If
 
+
+        Dim notification As New Notifications.Wpf.NotificationManager
+        Dim notificationContent As New Notifications.Wpf.NotificationContent
+
+        notificationContent.Title = "Your Cart"
+        notificationContent.Message = itemName.Text + " has been added to your cart!"
+        notificationContent.Type = Notifications.Wpf.NotificationType.Success
+
+        notification.Show(notificationContent)
     End Sub
 End Class

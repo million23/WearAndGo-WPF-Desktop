@@ -1,5 +1,6 @@
 ﻿Imports ModernWpf.Controls
 Imports System.Xml
+Imports Notifications.Wpf
 
 Public Class card_acc
     Private Async Sub addToCart(sender As Object, e As RoutedEventArgs)
@@ -50,5 +51,13 @@ Public Class card_acc
             End Try
         End If
 
+        Dim notification As New NotificationManager
+        Dim notificationContent As New NotificationContent
+
+        notificationContent.Title = "Your Cart"
+        notificationContent.Message = itemName.Text + " has been added to your cart!"
+        notificationContent.Type = NotificationType.Success
+
+        notification.Show(notificationContent)
     End Sub
 End Class
