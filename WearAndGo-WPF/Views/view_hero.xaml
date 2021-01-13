@@ -12,12 +12,12 @@
     <Page.Background>
         <ImageBrush Opacity="0.3" ImageSource="/WearAndGo-WPF;component/Assets/artur-matosyan-nlciawq8vC4-unsplash.jpg" Stretch="UniformToFill"/>
     </Page.Background>
-    <ui:SplitView Name="splitviewer" DisplayMode="Inline" IsPaneOpen="False" OpenPaneLength="500" PaneBackground="#5fffffff">
+    <ui:SplitView Name="splitviewer" DisplayMode="Overlay" LightDismissOverlayMode="On" IsPaneOpen="False" OpenPaneLength="550" >
         <ui:SplitView.Pane>
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="50 0">
                 <GroupBox Header="Employee Sign In">
                     <StackPanel Orientation="Vertical">
-                        <Separator Margin="0 20"/>
+                        <Separator Margin="50 20"/>
                         <TextBox MinWidth="300" Margin="0 10" Name="emptb_username" ui:ControlHelper.PlaceholderText="Username"/>
                         <PasswordBox MinWidth="300" Margin="0 10" Name="emptb_password" ui:ControlHelper.PlaceholderText="Password"/>
                         <Button Click="adminMode" Content="Sign In" HorizontalAlignment="Stretch" Margin="0 20"/>

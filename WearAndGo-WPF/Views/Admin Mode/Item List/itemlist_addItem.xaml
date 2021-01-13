@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="itemlist_addItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WearAndGo_WPF"
+             mc:Ignorable="d" 
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             FontFamily="Bahnschrift"
+             Height="auto" Width="550">
+    <Grid>
+        <ScrollViewer Name="scrollviewer">
+            <GroupBox Header="Add an Item"  Margin="50">
+                <Grid Margin="20 0 0 0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Column="1" Grid.Row="0" Margin="10">
+                        <Label Content="Item Category"  Margin="0 20 0 0"/>
+                        <ComboBox Name="in_itemCategory" SelectionChanged="detectCategory" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Apparel"/>
+                            <ComboBoxItem Content="Accessory"/>
+                            <ComboBoxItem Content="Footwear"/>
+                        </ComboBox>
+
+                        <Label Content="Item Gender" Margin="0 20 0 0"/>
+                        <ComboBox Name="in_itemGender" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Men"/>
+                            <ComboBoxItem Content="Women"/>
+                        </ComboBox>
+
+                        <Label Content="Item ID(input as Number)" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_itemID" HorizontalAlignment="Stretch" Minimum="0" Maximum="999" SpinButtonPlacementMode="Inline"/>
+
+                        <Separator Margin="20 50"/>
+                        <Button HorizontalAlignment="Stretch" Content="Add Item to Database" Click="addItemToDatabase"/>
+                    
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="0" Margin="10">
+                        <Label Content="Item Name" Margin="0 20 0 0"/>
+                        <TextBox Name="in_itemName"/>
+
+                        <Label Content="Item Price" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_itemPrice" HorizontalAlignment="Stretch" SpinButtonPlacementMode="Inline"/>
+
+                        <Label Name="label_itemvariant" Content="Item Size" Margin="0 20 0 0"/>
+                        <TextBox Name="in_itemVariant" MaxLength="3" />
+
+                        <Label Content="Stock Count" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_stockCount" HorizontalAlignment="Stretch" SpinButtonPlacementMode="Inline"/>
+
+                        <Label Content="Image Source URL" Margin="0 20 0 0"/>
+                        <TextBox Name="in_imageURL" />
+
+
+                    </StackPanel>
+                </Grid>
+                
+            </GroupBox>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -27,7 +27,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemSize.Text = item("size").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_men_app.wrapContainer.Children.Add(card)
             End If
@@ -40,7 +44,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemSize.Text = item("size").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_wom_app.wrapContainer.Children.Add(card)
             End If
@@ -60,7 +68,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemVariant.Text = item("desc").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_men_acc.wrapContainer.Children.Add(card)
             End If
@@ -73,7 +85,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemVariant.Text = item("desc").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_wom_acc.wrapContainer.Children.Add(card)
             End If
@@ -94,7 +110,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemSize.Text = item("size").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_men_ftw.wrapContainer.Children.Add(card)
             End If
@@ -107,7 +127,11 @@ Class MainWindow
                 card.itemID.Text = item.Attributes(2).Value
                 card.itemPrice.Text = item("price").InnerXml
                 card.itemSize.Text = item("size").InnerXml
-                card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Try
+                    card.itemImage.Source = New BitmapImage(New Uri(item("image").InnerXml))
+                Catch ex As Exception
+                    card.itemImage.Source = Nothing
+                End Try
 
                 _cm_wom_ftw.wrapContainer.Children.Add(card)
             End If

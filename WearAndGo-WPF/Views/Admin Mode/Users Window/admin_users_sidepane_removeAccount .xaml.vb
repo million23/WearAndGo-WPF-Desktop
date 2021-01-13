@@ -66,5 +66,6 @@ Public Class admin_users_sidepane_removeAccount
 
 
         Await dialog.ShowAsync
+        _admin_users.sidepane.IsPaneOpen = False
     End Sub
 End Class

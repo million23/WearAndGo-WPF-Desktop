@@ -1,4 +1,6 @@
-﻿Class view_adminMode
+﻿Imports System.Xml
+
+Class view_adminMode
     Private Sub resizeWindow(sender As Object, e As SizeChangedEventArgs)
         Dim actualH = My.Application.MainWindow.ActualHeight
         Dim actualW = My.Application.MainWindow.ActualWidth
@@ -17,6 +19,8 @@
                 adminFrame.Navigate(_admin_home)
             Case "Users"
                 adminFrame.Navigate(_admin_users)
+            Case "Inventory"
+                adminFrame.Navigate(_admin_itemList)
 
         End Select
     End Sub
@@ -37,6 +41,8 @@
 
         ' load user list
         _userList.ReadXml(_datalist_users_path)
+        _itemlist_generate_Columns()
+        _itemlist_getDatatable()
     End Sub
 
 End Class

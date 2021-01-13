@@ -9,7 +9,7 @@
       Loaded="getData"
       Title="admin_users"
       MinHeight="536" MinWidth="1024">
-    <ui:SplitView Name="sidepane" PanePlacement="Right" OpenPaneLength="450">
+    <ui:SplitView Name="sidepane" PanePlacement="Right" OpenPaneLength="450" LightDismissOverlayMode="On">
 
         <ui:SplitView.Pane>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">

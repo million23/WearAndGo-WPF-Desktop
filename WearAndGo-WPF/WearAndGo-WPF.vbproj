@@ -72,8 +72,14 @@
     <Compile Include="Views\Admin Mode\admin_home.xaml.vb">
       <DependentUpon>admin_home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin Mode\admin_itemList.xaml.vb">
+      <DependentUpon>admin_itemList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin Mode\admin_users.xaml.vb">
       <DependentUpon>admin_users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\Item List\itemlist_addItem.xaml.vb">
+      <DependentUpon>itemlist_addItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin Mode\Users Window\admin_users_sidepane_editAccount.xaml.vb">
       <DependentUpon>admin_users_sidepane_editAccount.xaml</DependentUpon>
@@ -143,7 +149,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Admin Mode\admin_itemList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Admin Mode\admin_users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin Mode\Item List\itemlist_addItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

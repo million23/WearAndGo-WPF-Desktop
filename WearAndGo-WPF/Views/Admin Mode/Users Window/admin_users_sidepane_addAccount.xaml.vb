@@ -50,6 +50,8 @@ Public Class admin_users_sidepane_addAccount
 
                 _datalist_users.Save(_datalist_users_path)
 
+                _admin_users.sidepane.IsPaneOpen = False
+
                 Await dialog.ShowAsync
 
                 _userList.Clear()
@@ -58,7 +60,16 @@ Public Class admin_users_sidepane_addAccount
 
             End If
 
+
+
         End If
+
+        AccountName.Text = ""
+        AccountPassword.Password = ""
+        AccountPasswordConfirm.Password = ""
+        AccountUsername.Text = ""
+        AccountType.SelectedIndex = -1
+
     End Sub
 
     Private Sub detectWhiteSpace(sender As Object, e As TextChangedEventArgs)
