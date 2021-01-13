@@ -1,8 +1,10 @@
 ﻿Imports System.Xml
+Imports System.Media
 
 Class MainWindow
     Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
-        My.Application.MainWindow.FindName("mainFrame").content = _view_hero
+        My.Application.MainWindow.FindName("mainFrame").content = _view_loadingScreen
+
 
         'delete all cart items on startup
         _datalist_cart.Load(_datalist_cart_path)

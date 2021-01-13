@@ -129,6 +129,9 @@
     <Compile Include="Views\view_hero.xaml.vb">
       <DependentUpon>view_hero.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\view_loadingScreen.xaml.vb">
+      <DependentUpon>view_loadingScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\view_yourCart.xaml.vb">
       <DependentUpon>view_yourCart.xaml</DependentUpon>
     </Compile>
@@ -225,6 +228,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\view_loadingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\view_yourCart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -317,6 +324,17 @@
   <ItemGroup>
     <Resource Include="Assets\artur-matosyan-nlciawq8vC4-unsplash.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Assets\intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Assets\sw_expobannerfold.wav.wav" />
+    <Content Include="bin\Debug\Assets\sw_expobannerunfold.wav" />
+    <Content Include="bin\Debug\Assets\ui_whoosh_splashscreen_enter_c01.wav" />
+    <Content Include="bin\Debug\Assets\ui_whoosh_splashscreen_exit_c01.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

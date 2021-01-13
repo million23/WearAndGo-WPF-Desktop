@@ -3,6 +3,7 @@
 Module _globals
 
     ' views
+    Public _view_loadingScreen As New view_loadingScreen
     Public _view_hero As New view_hero
     Public _view_cabinetMode As New view_cabinetMode
     Public _view_yourCart As New view_yourCart
