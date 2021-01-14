@@ -25,7 +25,10 @@
                     <ui:NavigationViewItem Tag="wft" Content="Women's Footwear"/>
                 </ui:NavigationView.MenuItems>
                 <ui:NavigationView.FooterMenuItems>
-                    <ui:NavigationViewItem Content="Exit Cabinet Mode"/>
+                    <!--<ui:NavigationViewItem Content="Exit Cabinet Mode"/>-->
+                    <ui:CommandBar>
+                        <ui:AppBarButton Click="ExitCabinetMode" Label="Exit Cabinet Mode"/>
+                    </ui:CommandBar>
                 </ui:NavigationView.FooterMenuItems>
             </ui:NavigationView>
 

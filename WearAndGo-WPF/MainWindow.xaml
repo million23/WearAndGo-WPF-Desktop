@@ -10,6 +10,7 @@
         ui:WindowHelper.UseModernWindowStyle="True"
         WindowStartupLocation="CenterScreen"
         Loaded="pageLoad"
+        Closing="PageClosing"
         MinHeight="576" MinWidth="1024"
         FontFamily="Bahnschrift"
         Title="Wear and Go" Background="{x:Null}">

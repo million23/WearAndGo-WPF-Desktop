@@ -30,5 +30,6 @@ Class admin_itemList
     End Sub
     Private Sub UpdateItem(sender As Object, e As RoutedEventArgs)
         sidepane.IsPaneOpen = True
+        sidepaneFrame.Content = _admin_inventory_sidepane_itemlist_updateItem
     End Sub
 End Class

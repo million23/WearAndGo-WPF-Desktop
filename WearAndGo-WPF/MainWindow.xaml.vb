@@ -21,7 +21,7 @@ Class MainWindow
         Dim app_root As XmlNode = _itemlist_app.DocumentElement
         For Each item As XmlNode In app_root
             'men
-            If item.Attributes(1).Value = "men" Then
+            If item.Attributes(1).Value = "men" AndAlso CInt(item("stock").InnerXml) > 0 Then
                 Dim card As New card_app
 
                 card.mainCard.ToolTip = item("name").InnerXml
@@ -139,8 +139,9 @@ Class MainWindow
             End If
         Next
 
+    End Sub
 
-
-
+    Private Sub PageClosing(sender As Object, e As ComponentModel.CancelEventArgs)
+        _view_yourCart.ForceClearCart(False, True)
     End Sub
 End Class

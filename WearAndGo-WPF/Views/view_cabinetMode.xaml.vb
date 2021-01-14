@@ -30,4 +30,8 @@
         cabinetFrame.Navigate(_view_yourCart)
     End Sub
 
+    Private Sub ExitCabinetMode(sender As Object, e As RoutedEventArgs)
+        My.Application.MainWindow.FindName("mainFrame").Navigate(_view_hero)
+        _view_yourCart.ForceClearCart(True, True)
+    End Sub
 End Class

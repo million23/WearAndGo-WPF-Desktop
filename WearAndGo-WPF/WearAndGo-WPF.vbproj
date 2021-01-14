@@ -110,6 +110,9 @@
     <Compile Include="Views\Admin Mode\admin_users.xaml.vb">
       <DependentUpon>admin_users.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin Mode\Item List\itemlist_updateItem.xaml.vb">
+      <DependentUpon>itemlist_updateItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin Mode\Item List\itemlist_removeItem.xaml.vb">
       <DependentUpon>itemlist_removeItem.xaml</DependentUpon>
     </Compile>
@@ -194,6 +197,10 @@
     <Page Include="Views\Admin Mode\admin_users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin Mode\Item List\itemlist_updateItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Admin Mode\Item List\itemlist_removeItem.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -334,21 +341,43 @@
     <PackageReference Include="Notifications.Wpf">
       <Version>0.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.XlsIO.Wpf">
+      <Version>18.4.0.34</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\itemlist_apparel.xml">
+    <Resource Include="bin\Debug\Data\datalist_cart.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Data\datalist_salehistory.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Data\datalist_users.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Data\itemlist_accessory.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Data\itemlist_apparel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Resource>
+    <Resource Include="bin\Debug\Data\itemlist_footwear.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Data\itemlist_apparel.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\itemlist_accessory.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\itemlist_footwear.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -360,13 +389,13 @@
   <ItemGroup>
     <Content Include="Data\datalist_salehistory.xml">
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\datalist_users.xml">
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

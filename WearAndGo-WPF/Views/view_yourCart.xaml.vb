@@ -191,7 +191,7 @@ Class view_yourCart
 
     End Sub
 
-    Private Async Sub ClearCart(sender As Object, e As RoutedEventArgs)
+    Public Async Sub ClearCart(sender As Object, e As RoutedEventArgs)
         Dim dialog As New ContentDialog
         dialog.Title = "Your Cart"
         dialog.Content = "Would you like to remove this from your cart?"
@@ -343,5 +343,92 @@ Class view_yourCart
 
 
         End If
+    End Sub
+
+    'force clear your cart content
+    Public Sub ForceClearCart(feedback As Boolean, restock As Boolean)
+
+        'load all database
+        _itemlist_app.Load(_itemlist_app_path)
+        _itemlist_acc.Load(_itemlist_acc_path)
+        _itemlist_ftw.Load(_itemlist_ftw_path)
+        Dim root_app As XmlNode = _itemlist_app.DocumentElement
+        Dim root_acc As XmlNode = _itemlist_acc.DocumentElement
+        Dim root_ftw As XmlNode = _itemlist_ftw.DocumentElement
+
+        ' loads cart data
+        _datalist_cart.Load(_datalist_cart_path)
+        Dim cartRoot As XmlNode = _datalist_cart.DocumentElement
+
+        If restock Then
+            'restock all items
+            For Each item As XmlNode In cartRoot
+                'loop all items to retrieve stock
+                ' ' apparel
+                If item.Attributes(0).Value = "app" Then
+                    For Each appItem As XmlNode In root_app
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                                appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                                appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+                ' ' accessory
+                If item.Attributes(0).Value = "acc" Then
+                    For Each appItem As XmlNode In root_acc
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                                appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                                appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+                ' ' footwear
+                If item.Attributes(0).Value = "ftw" Then
+                    For Each appItem As XmlNode In root_ftw
+                        If appItem.Attributes(0).Value = item.Attributes(0).Value AndAlso
+                                appItem.Attributes(1).Value = item.Attributes(1).Value AndAlso
+                                appItem.Attributes(2).Value = item.Attributes(2).Value Then
+
+                            appItem("stock").InnerXml = CInt(appItem("stock").InnerXml) + 1
+                        End If
+                    Next
+                End If
+
+            Next
+        End If
+
+
+        'remove all cart items
+        cartRoot.RemoveAll()
+
+        'save the database
+        _datalist_cart.Save(_datalist_cart_path)
+        _itemlist_app.Save(_itemlist_app_path)
+        _itemlist_acc.Save(_itemlist_acc_path)
+        _itemlist_ftw.Save(_itemlist_ftw_path)
+
+
+        If feedback Then
+            'reload the window
+            _view_yourCart.getCartData(Nothing, Nothing)
+
+            'feedback to user
+            Dim notification As New Notifications.Wpf.NotificationManager
+            Dim notificationContent As New Notifications.Wpf.NotificationContent
+
+            notificationContent.Title = "Your Cart"
+            notificationContent.Message = "Your Cart content reset"
+            notificationContent.Type = Notifications.Wpf.NotificationType.Error
+
+            notification.Show(notificationContent)
+        End If
+
+
     End Sub
 End Class

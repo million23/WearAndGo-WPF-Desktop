@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="itemlist_updateItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WearAndGo_WPF"
+             mc:Ignorable="d" 
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             FontFamily="Bahnschrift"
+             Height="auto" Width="550">
+    <Grid>
+        <ScrollViewer Name="scrollviewer">
+            <GroupBox Header="Update an Item"  Margin="50">
+                <Grid Margin="20 0 0 0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0">
+                        <Label Content="Selected Item Category"  Margin="0 20 0 0"/>
+                        <ComboBox Name="in_selectedItemCategory" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Apparel"/>
+                            <ComboBoxItem Content="Accessory"/>
+                            <ComboBoxItem Content="Footwear"/>
+                        </ComboBox>
+                        <Label Content="Selected Item Full ID"  Margin="0 20 0 0"/>
+                        <TextBox Name="in_selectedItemID"/>
+                        <Separator Margin="0 30"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Grid.Row="1" Margin="10 0 10 10">
+                        <Label Content="Item Category"  />
+                        <ComboBox Name="in_itemCategory" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Apparel"/>
+                            <ComboBoxItem Content="Accessory"/>
+                            <ComboBoxItem Content="Footwear"/>
+                        </ComboBox>
+
+                        <Label Content="Item Gender" Margin="0 20 0 0"/>
+                        <ComboBox Name="in_itemGender" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Men"/>
+                            <ComboBoxItem Content="Women"/>
+                        </ComboBox>
+
+                        <Label Content="Item ID(input as Number)" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_itemID" HorizontalAlignment="Stretch" Minimum="0" Maximum="999" SpinButtonPlacementMode="Inline"/>
+                        <Label Content="*Requires Gender and Category" />
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="0" Grid.Row="1" Margin="10 0 10 10">
+                        <Label Content="Item Name" />
+                        <TextBox Name="in_itemName"/>
+
+                        <Label Content="Item Price" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_itemPrice" HorizontalAlignment="Stretch" SpinButtonPlacementMode="Inline"/>
+
+                        <Label Name="label_itemvariant" Content="Item Size" Margin="0 20 0 0"/>
+                        <TextBox Name="in_itemVariant" MaxLength="3" />
+
+                        <Label Content="Stock Count" Margin="0 20 0 0"/>
+                        <ui:NumberBox Name="in_stockCount" HorizontalAlignment="Stretch" SpinButtonPlacementMode="Inline"/>
+
+                        <Label Content="Image Source URL" Margin="0 20 0 0"/>
+                        <TextBox Name="in_imageURL" />
+
+
+                    </StackPanel>
+                        <Button Margin="0 20" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Content="Update Item" Click="updateItem"/>
+                </Grid>
+                
+            </GroupBox>
+        </ScrollViewer>
+    </Grid>
+</UserControl>  
