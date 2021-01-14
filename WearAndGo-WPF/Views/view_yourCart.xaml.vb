@@ -271,14 +271,7 @@ Class view_yourCart
             _view_yourCart.getCartData(Nothing, Nothing)
 
             'feedback to user
-            Dim notification As New Notifications.Wpf.NotificationManager
-            Dim notificationContent As New Notifications.Wpf.NotificationContent
-
-            notificationContent.Title = "Your Cart"
-            notificationContent.Message = "All of your cart content has been removed"
-            notificationContent.Type = Notifications.Wpf.NotificationType.Error
-
-            notification.Show(notificationContent)
+            Await dialog.ShowAsync()
         End If
     End Sub
 
@@ -340,6 +333,7 @@ Class view_yourCart
             historyRoot.AppendChild(sales)
 
             _datalist_history.Save(_datalist_history_path)
+            ForceClearCart(False, False)
 
 
         End If
@@ -419,14 +413,13 @@ Class view_yourCart
             _view_yourCart.getCartData(Nothing, Nothing)
 
             'feedback to user
-            Dim notification As New Notifications.Wpf.NotificationManager
-            Dim notificationContent As New Notifications.Wpf.NotificationContent
+            Dim dialog As New ContentDialog
 
-            notificationContent.Title = "Your Cart"
-            notificationContent.Message = "Your Cart content reset"
-            notificationContent.Type = Notifications.Wpf.NotificationType.Error
+            dialog.Title = "Your Cart"
+            dialog.Content = "Your Cart content reset"
+            dialog.CloseButtonText = "Ok"
 
-            notification.Show(notificationContent)
+            dialog.ShowAsync()
         End If
 
 

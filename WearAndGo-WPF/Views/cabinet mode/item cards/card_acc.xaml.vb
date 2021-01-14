@@ -1,6 +1,5 @@
 ﻿Imports ModernWpf.Controls
 Imports System.Xml
-Imports Notifications.Wpf
 
 Public Class card_acc
     Private Async Sub addToCart(sender As Object, e As RoutedEventArgs)
@@ -42,22 +41,23 @@ Public Class card_acc
                         _datalist_cart.Save(_datalist_cart_path)
                         _itemlist_acc.Save(_itemlist_acc_path)
 
+                        Dim dialog1 As New ContentDialog
+                        dialog1.Title = "Your Cart"
+                        dialog1.Content = itemName.Text + " has been added to your cart!"
+                        dialog1.CloseButtonText = "Ok"
+                        Await dialog1.ShowAsync()
+
                         Exit For
 
                     End If
                 Next
             Catch ex As Exception
-                MsgBox("Something went wrong, try again.", MsgBoxStyle.OkOnly, "Your Cart")
+                Dim dialog1 As New ContentDialog
+                dialog1.Title = "Your Cart"
+                dialog1.Content = "Something happened unexpectedly. Can you try again?"
+                dialog1.CloseButtonText = "Ok"
             End Try
         End If
 
-        Dim notification As New NotificationManager
-        Dim notificationContent As New NotificationContent
-
-        notificationContent.Title = "Your Cart"
-        notificationContent.Message = itemName.Text + " has been added to your cart!"
-        notificationContent.Type = NotificationType.Success
-
-        notification.Show(notificationContent)
     End Sub
 End Class

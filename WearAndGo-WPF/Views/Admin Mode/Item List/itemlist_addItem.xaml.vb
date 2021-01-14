@@ -29,7 +29,7 @@ Public Class itemlist_addItem
     End Sub
 
     Private Sub InputData()
-        Dim dialog As New Notifications.Wpf.NotificationManager
+        Dim dialog As New ModernWpf.Controls.ContentDialog
 
         Select Case in_itemCategory.Text
             Case "Apparel"
@@ -90,11 +90,12 @@ Public Class itemlist_addItem
                     _itemlist_app.Save(_itemlist_app_path)
                     _itemlist_getDatatable()
 
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "This item has been added to the database"
-                    content.Type = Notifications.Wpf.NotificationType.Success
-                    dialog.Show(content)
+
+                    dialog.Title = "Inventory"
+                    dialog.Content = "This item has been deleted from the database"
+                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    dialog.CloseButtonText = "Ok"
+                    dialog.ShowAsync()
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -106,11 +107,12 @@ Public Class itemlist_addItem
                 Catch ex As Exception
 
 
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "Something went wrong, try again or contact the administrator"
-                    content.Type = Notifications.Wpf.NotificationType.Error
-                    dialog.Show(content)
+
+                    Dim dialog1 As New ModernWpf.Controls.ContentDialog
+                    dialog1.Title = "Your Cart"
+                    dialog1.Content = "Something happened unexpectedly. Can you try again?"
+                    dialog1.CloseButtonText = "Ok"
+                    dialog1.ShowAsync()
                     Exit Select
                 End Try
 
@@ -172,11 +174,12 @@ Public Class itemlist_addItem
                     _itemlist_acc.Save(_itemlist_acc_path)
                     _itemlist_getDatatable()
 
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "This item has been added to the database"
-                    content.Type = Notifications.Wpf.NotificationType.Success
-                    dialog.Show(content)
+                    dialog.Title = "Inventory"
+                    dialog.Content = "This item has been deleted from the database"
+                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    dialog.CloseButtonText = "Ok"
+                    dialog.ShowAsync()
+
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -186,13 +189,11 @@ Public Class itemlist_addItem
                     in_itemVariant.Text = ""
 
                 Catch ex As Exception
-
-
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "Something went wrong, try again or contact the administrator"
-                    content.Type = Notifications.Wpf.NotificationType.Error
-                    dialog.Show(content)
+                    Dim dialog1 As New ModernWpf.Controls.ContentDialog
+                    dialog1.Title = "Your Cart"
+                    dialog1.Content = "Something happened unexpectedly. Can you try again?"
+                    dialog1.CloseButtonText = "Ok"
+                    dialog1.ShowAsync()
                     Exit Select
                 End Try
 
@@ -254,11 +255,13 @@ Public Class itemlist_addItem
                     _itemlist_ftw.Save(_itemlist_ftw_path)
                     _itemlist_getDatatable()
 
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "This item has been added to the database"
-                    content.Type = Notifications.Wpf.NotificationType.Success
-                    dialog.Show(content)
+
+                    dialog.Title = "Inventory"
+                    dialog.Content = "This item has been deleted from the database"
+                    dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                    dialog.CloseButtonText = "Ok"
+                    dialog.ShowAsync()
+
 
                     in_itemName.Text = ""
                     in_itemCategory.Text = ""
@@ -268,13 +271,11 @@ Public Class itemlist_addItem
                     in_itemVariant.Text = ""
 
                 Catch ex As Exception
-
-                    Dim content As New Notifications.Wpf.NotificationContent
-                    content.Title = "Inventory"
-                    content.Message = "Something went wrong, try again or contact the administrator"
-                    content.Type = Notifications.Wpf.NotificationType.Error
-                    dialog.Show(content)
-
+                    Dim dialog1 As New ModernWpf.Controls.ContentDialog
+                    dialog1.Title = "Your Cart"
+                    dialog1.Content = "Something happened unexpectedly. Can you try again?"
+                    dialog1.CloseButtonText = "Ok"
+                    dialog1.ShowAsync()
                     Exit Select
                 End Try
 

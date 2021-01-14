@@ -201,6 +201,12 @@ Public Class itemlist_updateItem
                 in_itemVariant.Text = ""
                 in_stockCount.Text = ""
                 _admin_itemList.sidepane.IsPaneOpen = False
+                Dim dialog As New ModernWpf.Controls.ContentDialog
+                dialog.Title = "Item Updated"
+                dialog.Content = "The item has been successfully updated and changed"
+                dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+                dialog.CloseButtonText = "Great!"
+                dialog.ShowAsync()
 
             End If
 

@@ -87,14 +87,13 @@ Public Class item_yourCart
             _view_yourCart.getCartData(Nothing, Nothing)
 
 
-            Dim notification As New Notifications.Wpf.NotificationManager
-            Dim notificationContent As New Notifications.Wpf.NotificationContent
 
-            notificationContent.Title = "Your Cart"
-            notificationContent.Message = itemName.Text + " has been removed from your cart"
-            notificationContent.Type = Notifications.Wpf.NotificationType.Error
+            'feedback to user
+            dialog.Title = "Your Cart"
+            dialog.Content = "Your Cart content reset"
+            dialog.CloseButtonText = "Ok"
 
-            notification.Show(notificationContent)
+            Await dialog.ShowAsync()
 
         End If
 

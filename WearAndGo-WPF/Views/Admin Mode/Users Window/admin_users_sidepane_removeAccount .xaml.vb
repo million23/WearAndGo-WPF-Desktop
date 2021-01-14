@@ -44,7 +44,7 @@ Public Class admin_users_sidepane_removeAccount
                                         dialog.CloseButtonText = "Ok"
                                         dialog.DefaultButton = ContentDialogButton.Close
 
-
+                                        _admin_users.sidepane.IsPaneOpen = False
                                         _datalist_users.Save(_datalist_users_path)
 
                                         _userList.Clear()

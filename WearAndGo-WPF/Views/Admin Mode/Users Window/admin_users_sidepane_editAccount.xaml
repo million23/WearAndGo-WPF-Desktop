@@ -18,7 +18,7 @@
 
                     <Label Content="Account Type"/>
                     <ComboBox Name="AccountType" HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Admin"/>
+                        <ComboBoxItem Content="Administrator"/>
                         <ComboBoxItem Content="Sub-Admin"/>
                     </ComboBox>
                     
@@ -34,7 +34,7 @@
                     <Label Content="Confirm Account Password" Margin="0 10 0 0"/>
                     <PasswordBox Name="AccountPasswordConfirm"/>
 
-                    <Button Margin="0 50 0 0" HorizontalAlignment="Stretch" Content="Edit Account"/>
+                    <Button Margin="0 50 0 0" HorizontalAlignment="Stretch" Click="updateAccount" Content="Edit Account"/>
                 </StackPanel>
             </GroupBox>
         </StackPanel>

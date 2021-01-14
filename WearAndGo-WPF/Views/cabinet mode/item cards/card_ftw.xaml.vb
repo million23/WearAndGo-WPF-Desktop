@@ -41,23 +41,21 @@ Public Class card_ftw
                         _datalist_cart.Save(_datalist_cart_path)
                         _itemlist_ftw.Save(_itemlist_ftw_path)
 
+                        dialog.Title = "Your Cart"
+                        dialog.Content = itemName.Text + " has been added to your cart!"
+                        dialog.CloseButtonText = "Ok"
+                        Await dialog.ShowAsync()
+
                         Exit For
 
                     End If
                 Next
             Catch ex As Exception
-                MsgBox("Something went wrong, try again.", MsgBoxStyle.OkOnly, "Your Cart")
+                Dim dialog1 As New ContentDialog
+                dialog1.Title = "Your Cart"
+                dialog1.Content = "Something happened unexpectedly. Can you try again?"
+                dialog1.CloseButtonText = "Ok"
             End Try
         End If
-
-
-        Dim notification As New Notifications.Wpf.NotificationManager
-        Dim notificationContent As New Notifications.Wpf.NotificationContent
-
-        notificationContent.Title = "Your Cart"
-        notificationContent.Message = itemName.Text + " has been added to your cart!"
-        notificationContent.Type = Notifications.Wpf.NotificationType.Success
-
-        notification.Show(notificationContent)
     End Sub
 End Class
