@@ -1,0 +1,7 @@
+<users>
+  <user Type="Administrator" Name="ADMIN" Username="admin" Password="admin" />
+  <user Type="Sub-Admin" Name="Gerald Chavez" Username="million23" Password="102399" />
+  <user Type="Sub-Admin" Name="Kevin Corpin" Username="kevincorpin" Password="kevincorpin" />
+  <user Type="Sub-Admin" Name="Carlo Diaz" Username="carlodiaz" Password="carlodiaz" />
+  <user Type="Administrator" Name="otheradmin" Username="otheradmin" Password="otheradmin" />
+</users>

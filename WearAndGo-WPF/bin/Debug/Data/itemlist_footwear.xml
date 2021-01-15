@@ -1,0 +1,37 @@
+<itemList>
+  <item category="ftw" gender="men" id="MP3001">
+    <name>Nike Air Zoom Tempo</name>
+    <price>9100</price>
+    <image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a353a9f7-eb58-47ed-968e-f69c5a75a9c4/air-zoom-tempo-next-running-shoe-chNfdw.jpg</image>
+    <size>8</size>
+    <stock>99</stock>
+  </item>
+  <item category="ftw" gender="men" id="MP3002">
+    <name>Nike Air Max 1</name>
+    <price>6200</price>
+    <image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/75b7368c-8873-4662-9f89-157bd2cfb97f/air-max-1-shoe-SS9rJG.jpg</image>
+    <size>8</size>
+    <stock>99</stock>
+  </item>
+  <item category="ftw" gender="men" id="MP3003">
+    <name>Nike Air VaporMax 2020 Flyknit</name>
+    <price>11200</price>
+    <image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7d198c7a-b5d9-4cb2-ac7f-7b6488f56930/air-vapormax-2020-flyknit-shoe-5xSzzZ.jpg</image>
+    <size>8</size>
+    <stock>99</stock>
+  </item>
+  <item category="ftw" gender="wom" id="WP3001">
+    <name>Nike Air Zoom Pegasus 37</name>
+    <price>5700</price>
+    <image>https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/921233bd-ecb3-48af-81b6-cff9205c3e0a/air-zoom-pegasus-37-womens-running-shoe-Jl0bDf.jpg</image>
+    <size>7</size>
+    <stock>99</stock>
+  </item>
+  <item category="ftw" gender="wom" id="WP3002">
+    <name>Nike Air Force 1 Shadow</name>
+    <price>5200</price>
+    <image>https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/a044b51d-9658-428f-9297-f21bb0992855/air-force-1-shadow-womens-shoe-kTgn9J.jpg</image>
+    <size>6</size>
+    <stock>99</stock>
+  </item>
+</itemList>

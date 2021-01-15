@@ -1,0 +1,338 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WearAndGo-WPF
+</name>
+</assembly>
+<members>
+<member name="T:WearAndGo_WPF.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:WearAndGo_WPF.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:WearAndGo_WPF.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:WearAndGo_WPF.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:WearAndGo_WPF.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:WearAndGo_WPF.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:WearAndGo_WPF.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:WearAndGo_WPF.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:WearAndGo_WPF.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:WearAndGo_WPF.My.Resources.Resources.activeUser">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="P:WearAndGo_WPF.My.Resources.Resources.activeUser_type">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="P:WearAndGo_WPF.My.Resources.Resources.intro">
+<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_home">
+<summary>
+admin_home
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_home.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_itemList">
+<summary>
+admin_itemList
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_itemList.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_users">
+<summary>
+admin_users
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_users.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.itemlist_updateItem">
+<summary>
+itemlist_updateItem
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.itemlist_updateItem.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.itemlist_removeItem">
+<summary>
+itemlist_removeItem
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.itemlist_removeItem.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.itemlist_addItem">
+<summary>
+itemlist_addItem
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.itemlist_addItem.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_users_sidepane_editAccount">
+<summary>
+admin_users_sidepane_editAccount
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_users_sidepane_editAccount.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_users_sidepane_removeAccount">
+<summary>
+admin_users_sidepane_removeAccount
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_users_sidepane_removeAccount.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.admin_users_sidepane_addAccount">
+<summary>
+admin_users_sidepane_addAccount
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_users_sidepane_addAccount.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_wom_ftw">
+<summary>
+cm_wom_ftw
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_wom_ftw.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_wom_acc">
+<summary>
+cm_wom_acc
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_wom_acc.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_men_acc">
+<summary>
+cm_men_acc
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_men_acc.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_wom_app">
+<summary>
+cm_wom_app
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_wom_app.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_men_app">
+<summary>
+cm_men_app
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_men_app.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.cm_men_ftw">
+<summary>
+cm_men_ftw
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.cm_men_ftw.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.card_acc">
+<summary>
+card_acc
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.card_acc.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.card_app">
+<summary>
+card_app
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.card_app.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.card_ftw">
+<summary>
+card_ftw
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.card_ftw.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.item_yourCart">
+<summary>
+item_yourCart
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.item_yourCart.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.view_adminMode">
+<summary>
+view_adminMode
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.view_adminMode.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.view_cabinetMode">
+<summary>
+view_cabinetMode
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.view_cabinetMode.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.view_hero">
+<summary>
+view_hero
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.view_hero.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.view_loadingScreen">
+<summary>
+view_loadingScreen
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.view_loadingScreen.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.view_yourCart">
+<summary>
+view_yourCart
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.view_yourCart.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:WearAndGo_WPF.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>
