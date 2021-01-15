@@ -12,7 +12,7 @@
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="30 0 0 0">
                     <Label Content="Account Type*"/>
                     <ComboBox Name="AccountType" HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Admin"/>
+                        <ComboBoxItem Content="Administrator"/>
                         <ComboBoxItem Content="Sub-Admin"/>
                     </ComboBox>
                     

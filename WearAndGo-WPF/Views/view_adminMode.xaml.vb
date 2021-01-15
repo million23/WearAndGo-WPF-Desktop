@@ -39,10 +39,6 @@ Class view_adminMode
             usersTab.Content = "Users (Requires an Administrator Account)"
         End If
 
-        ' load user list
-        _userList.ReadXml(_datalist_users_path)
-        _itemlist_generate_Columns()
-        _itemlist_getDatatable()
     End Sub
 
 End Class

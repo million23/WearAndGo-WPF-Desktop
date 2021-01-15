@@ -19,4 +19,22 @@ Class admin_home
             recent_itemCount.Text = "The last client bought " + historyRoot.LastChild.ChildNodes.Count.ToString + " item"
         End If
     End Sub
+
+    Private Async Sub signOut(sender As Object, e As RoutedEventArgs)
+
+        Dim dialog As New ModernWpf.Controls.ContentDialog
+        dialog.Title = "Sign Out"
+        dialog.Content = "Do you want to sign out?"
+        dialog.DefaultButton = ModernWpf.Controls.ContentDialogButton.Close
+        dialog.CloseButtonText = "No"
+        dialog.PrimaryButtonText = "Yes"
+
+        Dim result As ModernWpf.Controls.ContentDialogResult = Await dialog.ShowAsync
+
+        If result = ModernWpf.Controls.ContentDialogResult.Primary Then
+            My.Application.MainWindow.FindName("mainFrame").Navigate(_view_hero)
+
+        End If
+
+    End Sub
 End Class

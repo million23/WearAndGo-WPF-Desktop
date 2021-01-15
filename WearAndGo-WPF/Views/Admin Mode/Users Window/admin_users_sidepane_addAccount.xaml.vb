@@ -16,7 +16,6 @@ Public Class admin_users_sidepane_addAccount
             dialog.DefaultButton = ContentDialogButton.Close
 
             Await dialog.ShowAsync
-
         Else
 
             If AccountPassword.Password = AccountPasswordConfirm.Password Then
