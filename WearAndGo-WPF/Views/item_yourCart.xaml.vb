@@ -8,6 +8,7 @@ Public Class item_yourCart
 
     Private Async Sub removeFromCart(sender As Object, e As RoutedEventArgs)
         Dim dialog As New ContentDialog
+        Dim dialog1 As New ContentDialog
         dialog.Title = "Your Cart"
         dialog.Content = "Would you like to remove this from your cart?"
         dialog.DefaultButton = ContentDialogButton.Close
@@ -73,27 +74,25 @@ Public Class item_yourCart
                             End If
                         Next
                     End If
+                    'save the database
+                    _datalist_cart.Save(_datalist_cart_path)
+                    _itemlist_app.Save(_itemlist_app_path)
+                    _itemlist_acc.Save(_itemlist_acc_path)
+                    _itemlist_ftw.Save(_itemlist_ftw_path)
+
+                    'feedback to user
+                    dialog1.Title = "Your Cart"
+                    dialog1.Content = "This item has been removed from your cart"
+                    dialog1.CloseButtonText = "Ok"
+
+                    Await dialog1.ShowAsync()
+
+                    'reload the window
+                    _view_yourCart.getCartData(Nothing, Nothing)
                 End If
             Next
 
 
-            'save the database
-            _datalist_cart.Save(_datalist_cart_path)
-            _itemlist_app.Save(_itemlist_app_path)
-            _itemlist_acc.Save(_itemlist_acc_path)
-            _itemlist_ftw.Save(_itemlist_ftw_path)
-
-            'reload the window
-            _view_yourCart.getCartData(Nothing, Nothing)
-
-
-
-            'feedback to user
-            dialog.Title = "Your Cart"
-            dialog.Content = "Your Cart content reset"
-            dialog.CloseButtonText = "Ok"
-
-            Await dialog.ShowAsync()
 
         End If
 

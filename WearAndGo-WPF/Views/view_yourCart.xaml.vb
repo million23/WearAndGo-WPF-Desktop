@@ -10,8 +10,8 @@ Class view_yourCart
         Dim actualW = My.Application.MainWindow.ActualWidth
 
         mainwindow.Width = actualW
-        mainwindow.Height = actualH - 120
-        scroller.Height = actualH - 140
+        mainwindow.Height = actualH - 100
+        scroller.Height = actualH - 100
     End Sub
 
     Public Sub getCartData(sender As Object, e As RoutedEventArgs)
@@ -30,8 +30,10 @@ Class view_yourCart
         'check if cart has items. If false, hide the transaction commands
         If root_cart.HasChildNodes Then
             transactionCommands.Visibility = Visibility.Visible
+            mainwindow.Header = "Your Cart"
         Else
             transactionCommands.Visibility = Visibility.Hidden
+            mainwindow.Header = "Your Cart - Empty"
         End If
 
         'make sum change to 0 everytime the page loads
@@ -194,7 +196,7 @@ Class view_yourCart
     Public Async Sub ClearCart(sender As Object, e As RoutedEventArgs)
         Dim dialog As New ContentDialog
         dialog.Title = "Your Cart"
-        dialog.Content = "Would you like to remove this from your cart?"
+        dialog.Content = "Would you like to clear items in your cart?"
         dialog.DefaultButton = ContentDialogButton.Close
         dialog.PrimaryButtonText = "Yes"
         dialog.CloseButtonText = "No"
@@ -271,7 +273,13 @@ Class view_yourCart
             _view_yourCart.getCartData(Nothing, Nothing)
 
             'feedback to user
-            Await dialog.ShowAsync()
+            Dim dialog1 As New ContentDialog
+            dialog1.Title = "Your Cart"
+            dialog1.Content = "Cart items has been cleared?"
+            dialog1.DefaultButton = ContentDialogButton.Close
+            dialog1.CloseButtonText = "OK"
+
+            Await dialog1.ShowAsync()
         End If
     End Sub
 
@@ -333,8 +341,10 @@ Class view_yourCart
             historyRoot.AppendChild(sales)
 
             _datalist_history.Save(_datalist_history_path)
-            ForceClearCart(False, False)
 
+            ForceClearCart(False, False)
+            'reload the window
+            _view_yourCart.getCartData(Nothing, Nothing)
 
         End If
     End Sub

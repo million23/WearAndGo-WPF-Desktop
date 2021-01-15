@@ -21,6 +21,7 @@ Module _globals
     Public _admin_home As New admin_home
     Public _admin_users As New admin_users
     Public _admin_itemList As New admin_itemList
+    Public _admin_sales As New admin_sales
 
     'admin mode side panels
     'user window
@@ -48,9 +49,11 @@ Module _globals
 
     'datasets
     Public _userList As New Data.DataSet
+    Public _dataset_saleHistory As New Data.DataSet
     Public _dataset_app As New Data.DataSet
     Public _dataset_acc As New Data.DataSet
     Public _dataset_ftw As New Data.DataSet
+    Public _datatable_saleHistory As New Data.DataTable
     Public _datatable_app As New Data.DataTable
     Public _datatable_acc As New Data.DataTable
     Public _datatable_ftw As New Data.DataTable
@@ -272,4 +275,30 @@ Module _globals
         Next
     End Sub
 
+    Public Sub _salesHistory_getData()
+        _datatable_saleHistory.Reset()
+        _datatable_saleHistory.Rows.Clear()
+
+        _datatable_saleHistory.Columns.Add("Count").AutoIncrement = True
+        _datatable_saleHistory.Columns.Add("Date").ReadOnly = True
+        _datatable_saleHistory.Columns.Add("ID").ReadOnly = True
+        _datatable_saleHistory.Columns.Add("Total Sale").ReadOnly = True
+        _datatable_saleHistory.Columns.Add("Item Count").ReadOnly = True
+
+        _datatable_saleHistory.Columns(0).AutoIncrementSeed = 1
+
+        _datalist_history.Load(_datalist_history_path)
+        Dim root As XmlNode = _datalist_history.DocumentElement
+        If root.HasChildNodes Then
+            For Each sale As XmlNode In root
+                _datatable_saleHistory.Rows.Add(Nothing,
+                                                sale.Attributes(0).Value,
+                                                sale.Attributes(1).Value,
+                                                sale.Attributes(2).Value,
+                                                sale.ChildNodes.Count)
+            Next
+
+        End If
+        _admin_sales.mainGrid.ItemsSource = _datatable_saleHistory.DefaultView
+    End Sub
 End Module

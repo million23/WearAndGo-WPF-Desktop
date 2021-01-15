@@ -46,7 +46,7 @@
                         </Grid.RowDefinitions>
 
                         <GroupBox Grid.Row="0" Header="Apparel" Margin="50 20 100 20">
-                            <DataGrid Name="grid_app" 
+                            <DataGrid IsReadOnly="True" Name="grid_app" 
                               ui:ScrollViewerHelper.AutoHideScrollBars="True"
                               CanUserResizeRows="False"
                               ColumnHeaderHeight="50" 
@@ -64,7 +64,7 @@
                         </GroupBox>
 
                         <GroupBox Grid.Row="1" Header="Accessory" Margin="50 50 100 20">
-                            <DataGrid Name="grid_acc" 
+                            <DataGrid IsReadOnly="True" Name="grid_acc" 
                               ui:ScrollViewerHelper.AutoHideScrollBars="True"
                               CanUserResizeRows="False"
                               ColumnHeaderHeight="50" 
@@ -82,7 +82,7 @@
                         </GroupBox>
 
                         <GroupBox Grid.Row="2" Header="Footwear" Margin="50 50 100 20">
-                            <DataGrid Name="grid_ftw" 
+                            <DataGrid IsReadOnly="True" Name="grid_ftw" 
                               ui:ScrollViewerHelper.AutoHideScrollBars="True"
                               CanUserResizeRows="False"
                               ColumnHeaderHeight="50" 

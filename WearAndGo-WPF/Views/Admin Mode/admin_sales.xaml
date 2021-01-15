@@ -1,0 +1,35 @@
+﻿<Page x:Class="admin_sales"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WearAndGo_WPF"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
+      mc:Ignorable="d"
+      Loaded="getData"
+      Title="admin_users"
+      MinHeight="536" MinWidth="1024">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <ui:SimpleStackPanel Orientation="Vertical">
+            
+            <StackPanel>
+                <DataGrid ui:ScrollViewerHelper.AutoHideScrollBars="True"
+                          CanUserResizeRows="False" 
+                          Name="mainGrid"
+                          IsReadOnly="True"
+                          ColumnHeaderHeight="50" 
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="False" 
+                          HorizontalAlignment="Stretch" 
+                          VerticalAlignment="Stretch" 
+                          ColumnWidth="auto" 
+                          MinColumnWidth="200"
+                          MaxColumnWidth="500"
+                          ItemsSource="{Binding Users}">
+
+                </DataGrid>
+            </StackPanel>
+        </ui:SimpleStackPanel>
+    </Grid>
+</Page>

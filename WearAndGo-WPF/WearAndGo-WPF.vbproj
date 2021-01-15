@@ -27,7 +27,7 @@
     <TargetCulture>en</TargetCulture>
     <ProductName>Wear and Go - WPF Desktop Application</ProductName>
     <PublisherName>Million Creations</PublisherName>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -106,6 +106,9 @@
     </Compile>
     <Compile Include="Views\Admin Mode\admin_itemList.xaml.vb">
       <DependentUpon>admin_itemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin Mode\admin_sales.xaml.vb">
+      <DependentUpon>admin_sales.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin Mode\admin_users.xaml.vb">
       <DependentUpon>admin_users.xaml</DependentUpon>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Admin Mode\admin_itemList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Admin Mode\admin_sales.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

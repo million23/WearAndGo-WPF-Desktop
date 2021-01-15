@@ -34,6 +34,7 @@ Class view_hero
 
                 emptb_username.Text = ""
                 emptb_password.Password = ""
+                splitviewer.IsPaneOpen = False
                 Exit For
             End If
         Next

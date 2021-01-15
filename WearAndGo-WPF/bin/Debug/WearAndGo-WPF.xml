@@ -89,6 +89,16 @@ admin_itemList
 InitializeComponent
 </summary>
 </member>
+<member name="T:WearAndGo_WPF.admin_sales">
+<summary>
+admin_sales
+</summary>
+</member>
+<member name="M:WearAndGo_WPF.admin_sales.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:WearAndGo_WPF.admin_users">
 <summary>
 admin_users

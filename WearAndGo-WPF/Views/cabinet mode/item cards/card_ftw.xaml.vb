@@ -4,6 +4,7 @@ Imports System.Xml
 Public Class card_ftw
     Private Async Sub addToCart(sender As Object, e As RoutedEventArgs)
         Dim dialog As New ContentDialog
+        Dim dialog1 As New ContentDialog
         dialog.Title = "Your Cart"
         dialog.Content = "Add this item to your cart?" + vbNewLine + vbNewLine + itemName.Text
         dialog.DefaultButton = ContentDialogButton.Close
@@ -41,17 +42,18 @@ Public Class card_ftw
                         _datalist_cart.Save(_datalist_cart_path)
                         _itemlist_ftw.Save(_itemlist_ftw_path)
 
-                        dialog.Title = "Your Cart"
-                        dialog.Content = itemName.Text + " has been added to your cart!"
-                        dialog.CloseButtonText = "Ok"
-                        Await dialog.ShowAsync()
+                        dialog1.Title = "Your Cart"
+                        dialog1.Content = itemName.Text + " has been added to your cart!"
+                        dialog1.CloseButtonText = "Ok"
+                        dialog1.DefaultButton = ContentDialogButton.Close
+
+                        Await dialog1.ShowAsync()
 
                         Exit For
 
                     End If
                 Next
             Catch ex As Exception
-                Dim dialog1 As New ContentDialog
                 dialog1.Title = "Your Cart"
                 dialog1.Content = "Something happened unexpectedly. Can you try again?"
                 dialog1.CloseButtonText = "Ok"

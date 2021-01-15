@@ -4,14 +4,14 @@
     <price>450</price>
     <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/NilanCharcoal2_500x.jpg</image>
     <size>M</size>
-    <stock>0</stock>
+    <stock>5</stock>
   </item>
   <item category="app" gender="men" id="MP1002">
     <name>Mens Nilan Crew Sweat Black</name>
     <price>450</price>
     <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/NilanBlack2_500x.jpg</image>
     <size>M</size>
-    <stock>98</stock>
+    <stock>96</stock>
   </item>
   <item category="app" gender="men" id="MP1003">
     <name>Mens Queens Long Sleeve T-Shirt 2 Pack Charcoal Marl/Grey Marl</name>

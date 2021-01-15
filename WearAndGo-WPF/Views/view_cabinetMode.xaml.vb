@@ -29,6 +29,7 @@
     Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
         cabinetFrame.Navigate(_view_yourCart)
         cabinetMode_loadItemList()
+        _salesHistory_getData()
     End Sub
 
     Private Sub ExitCabinetMode(sender As Object, e As RoutedEventArgs)

@@ -21,6 +21,8 @@ Class view_adminMode
                 adminFrame.Navigate(_admin_users)
             Case "Inventory"
                 adminFrame.Navigate(_admin_itemList)
+            Case "Sales"
+                adminFrame.Navigate(_admin_sales)
 
         End Select
     End Sub

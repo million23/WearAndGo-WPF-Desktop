@@ -12,6 +12,7 @@
         Closing="PageClosing"
         MinHeight="576" MinWidth="1024"
         FontFamily="Bahnschrift"
+        ui:ThemeManager.RequestedTheme="Dark"
         Title="Wear and Go" Background="{x:Null}">
     <Grid>
         <ui:Frame HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="mainFrame">

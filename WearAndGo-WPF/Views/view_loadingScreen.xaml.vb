@@ -12,6 +12,12 @@ Class view_loadingScreen
         AddHandler timerDis.Tick, AddressOf timerTicks
         timerDis.Start()
 
+
+        ' load user list
+        _userList.ReadXml(_datalist_users_path)
+        _itemlist_generate_Columns()
+        _itemlist_getDatatable()
+
     End Sub
 
     Private Sub timerTicks()
