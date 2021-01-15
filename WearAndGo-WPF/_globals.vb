@@ -276,22 +276,23 @@ Module _globals
     End Sub
 
     Public Sub _salesHistory_getData()
-        _datatable_saleHistory.Reset()
+        Dim count As Integer = 0
+        _datatable_saleHistory.Columns.Clear()
         _datatable_saleHistory.Rows.Clear()
 
-        _datatable_saleHistory.Columns.Add("Count").AutoIncrement = True
-        _datatable_saleHistory.Columns.Add("Date").ReadOnly = True
-        _datatable_saleHistory.Columns.Add("ID").ReadOnly = True
-        _datatable_saleHistory.Columns.Add("Total Sale").ReadOnly = True
-        _datatable_saleHistory.Columns.Add("Item Count").ReadOnly = True
-
-        _datatable_saleHistory.Columns(0).AutoIncrementSeed = 1
+        _datatable_saleHistory.Columns.Add("Count")
+        _datatable_saleHistory.Columns.Add("Date")
+        _datatable_saleHistory.Columns.Add("ID")
+        _datatable_saleHistory.Columns.Add("Total Sale")
+        _datatable_saleHistory.Columns.Add("Item Count")
 
         _datalist_history.Load(_datalist_history_path)
         Dim root As XmlNode = _datalist_history.DocumentElement
+
         If root.HasChildNodes Then
             For Each sale As XmlNode In root
-                _datatable_saleHistory.Rows.Add(Nothing,
+                count += 1
+                _datatable_saleHistory.Rows.Add(count,
                                                 sale.Attributes(0).Value,
                                                 sale.Attributes(1).Value,
                                                 sale.Attributes(2).Value,
@@ -301,4 +302,5 @@ Module _globals
         End If
         _admin_sales.mainGrid.ItemsSource = _datatable_saleHistory.DefaultView
     End Sub
+
 End Module

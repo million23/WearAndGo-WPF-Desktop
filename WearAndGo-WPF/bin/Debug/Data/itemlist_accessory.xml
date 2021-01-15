@@ -11,14 +11,14 @@
     <price>250</price>
     <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09667_large.jpg</image>
     <desc>M</desc>
-    <stock>96</stock>
+    <stock>91</stock>
   </item>
   <item category="acc" gender="men" id="MP2003">
     <name>Wesson Cap Black</name>
     <price>250</price>
     <image>https://cdn.shopify.com/s/files/1/0270/1937/8762/products/DSC09665_large.jpg</image>
     <desc>M</desc>
-    <stock>99</stock>
+    <stock>97</stock>
   </item>
   <item category="acc" gender="men" id="MP2004">
     <name>Mykonos Bucket Hat Khaki</name>

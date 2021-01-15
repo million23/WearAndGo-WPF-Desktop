@@ -11,13 +11,19 @@ Class admin_itemList
         grid_ftw.ItemsSource = _datatable_ftw.DefaultView
 
         _admin_itemList.scrollViewer.Height = actualH - 150
-
+        _admin_inventory_sidepane_itemlist_addItem.scrollviewer.Height = actualH - 150
+        _admin_inventory_sidepane_itemlist_removeItem.scrollviewer.Height = actualH - 150
+        _admin_inventory_sidepane_itemlist_updateItem.scrollviewer.Height = actualH - 150
     End Sub
 
     Private Sub resizeWindow(sender As Object, e As SizeChangedEventArgs)
         Dim actualH = My.Application.MainWindow.ActualHeight
         scrollViewer.Height = actualH - 100
         _admin_itemList.scrollViewer.Height = actualH - 100
+        _admin_itemList.scrollViewer.Height = actualH - 150
+        _admin_inventory_sidepane_itemlist_addItem.scrollviewer.Height = actualH - 150
+        _admin_inventory_sidepane_itemlist_removeItem.scrollviewer.Height = actualH - 150
+        _admin_inventory_sidepane_itemlist_updateItem.scrollviewer.Height = actualH - 150
     End Sub
 
     Private Sub AddItem(sender As Object, e As RoutedEventArgs)

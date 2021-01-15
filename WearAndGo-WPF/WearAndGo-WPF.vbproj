@@ -426,7 +426,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\Data\Receipt\" />
+  </ItemGroup>
   <ItemGroup>
     <PublishFile Include="bin\Debug\Data\datalist_cart.xml">
       <Visible>False</Visible>

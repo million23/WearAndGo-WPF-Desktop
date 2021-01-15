@@ -19,4 +19,31 @@
   <sale date="1/15/2021_8:47 PM" id="2021Y1M15D_257500296" totalSale="450">
     <item category="app" gender="men" id="MP1002" />
   </sale>
+  <sale date="1/15/2021_11:09 PM" id="2021Y1M15D_323235160" totalSale="250">
+    <item category="acc" gender="men" id="MP2002" />
+  </sale>
+  <sale date="1/15/2021_11:11 PM" id="2021Y1M15D_1028969416" totalSale="250">
+    <item category="acc" gender="men" id="MP2003" />
+  </sale>
+  <sale date="1/15/2021_11:40 PM" id="2021Y1M15D_538109416" totalSale="9800">
+    <item category="app" gender="men" id="MP1002" />
+    <item category="acc" gender="men" id="MP2002" />
+    <item category="ftw" gender="men" id="MP3001" />
+  </sale>
+  <sale date="1/15/2021_11:41 PM" id="2021Y1M15D_145882256" totalSale="250">
+    <item category="acc" gender="men" id="MP2002" />
+  </sale>
+  <sale date="1/15/2021_11:41 PM" id="2021Y1M15D_952843336" totalSale="250">
+    <item category="acc" gender="men" id="MP2003" />
+  </sale>
+  <sale date="1/15/2021_11:42 PM" id="2021Y1M15D_432778024" totalSale="450">
+    <item category="app" gender="men" id="MP1002" />
+  </sale>
+  <sale date="1/15/2021_11:45 PM" id="2021Y1M15D_248894344" totalSale="250">
+    <item category="acc" gender="men" id="MP2002" />
+  </sale>
+  <sale date="1/15/2021_11:46 PM" id="2021Y1M15D_149574884" totalSale="1100">
+    <item category="app" gender="men" id="MP1002" />
+    <item category="app" gender="men" id="MP1003" />
+  </sale>
 </saleHistory>

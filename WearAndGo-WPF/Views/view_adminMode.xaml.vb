@@ -41,6 +41,7 @@ Class view_adminMode
             usersTab.Content = "Users (Requires an Administrator Account)"
         End If
 
+        _salesHistory_getData()
     End Sub
 
 End Class

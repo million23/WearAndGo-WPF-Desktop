@@ -291,11 +291,14 @@ Class view_yourCart
         dialog.PrimaryButtonText = "Yes"
         dialog.CloseButtonText = "No"
 
+
         'make reference ID
         Dim timestamp As String = Now.Year.ToString + "Y" + Now.Month.ToString + "M" + Now.Day.ToString + "D"
         Randomize()
         Dim ID_int As Integer = Int(Rnd() * 999999999) + 111111111
         Dim referenceID As String = timestamp + "_" + ID_int.ToString
+
+
 
         'show prompt if wanted to checkout
         Dim result As ContentDialogResult = Await dialog.ShowAsync
@@ -342,12 +345,65 @@ Class view_yourCart
 
             _datalist_history.Save(_datalist_history_path)
 
+
+            Dim FS = CreateObject("Scripting.FileSystemObject")
+            Dim file = FS.CreateTextFile("Data\Receipt\" + referenceID + ".txt", True)
+
+            Dim message As String
+            message = Now.Date.ToShortDateString.ToString + vbNewLine +
+            Now.ToShortTimeString + vbNewLine + vbNewLine +
+            "Wear and Go - Reselling Portal" + vbNewLine +
+            "--------------------------------------------" + vbNewLine + vbNewLine +
+            itemMessage() + vbNewLine + vbNewLine +
+            "--------------------------------------------" + vbNewLine + vbNewLine +
+            "Total Price:" + vbNewLine + vbTab + "PHP " + totalSum.ToString
+
+            file.Write(message)
+            file.Close()
+
+            With CreateObject("WScript.Shell")
+                .Run("Data\Receipt\" + referenceID + ".txt")
+            End With
+
+
+
             ForceClearCart(False, False)
             'reload the window
             _view_yourCart.getCartData(Nothing, Nothing)
-
         End If
     End Sub
+
+    Private Function itemMessage()
+        Dim message As String = String.Empty
+        _datalist_cart.Load(_datalist_cart_path)
+        _itemlist_app.Load(_itemlist_app_path)
+        _itemlist_acc.Load(_itemlist_acc_path)
+        _itemlist_ftw.Load(_itemlist_ftw_path)
+        Dim rootcart As XmlNode = _datalist_cart.DocumentElement
+        Dim rootapp As XmlNode = _itemlist_app.DocumentElement
+        Dim rootacc As XmlNode = _itemlist_acc.DocumentElement
+        Dim rootftw As XmlNode = _itemlist_ftw.DocumentElement
+
+        For Each itemcart As XmlNode In rootcart
+            For Each itemapp As XmlNode In rootapp
+                If itemcart.Attributes(2).Value = itemapp.Attributes(2).Value Then
+                    message += itemapp("name").InnerXml + vbNewLine + itemapp.Attributes(2).Value + vbTab + "PHP " + itemapp("price").InnerXml + vbNewLine + vbNewLine
+                End If
+            Next
+            For Each itemacc As XmlNode In rootacc
+                If itemcart.Attributes(2).Value = itemacc.Attributes(2).Value Then
+                    message += itemacc("name").InnerXml + vbNewLine + itemacc.Attributes(2).Value + vbTab + "PHP " + itemacc("price").InnerXml + vbNewLine + vbNewLine
+                End If
+            Next
+            For Each itemftw As XmlNode In rootftw
+                If itemcart.Attributes(2).Value = itemftw.Attributes(2).Value Then
+                    message += itemftw("name").InnerXml + vbNewLine + itemftw.Attributes(2).Value + vbTab + "PHP " + itemftw("price").InnerXml + vbNewLine + vbNewLine
+                End If
+            Next
+        Next
+
+        Return message
+    End Function
 
     'force clear your cart content
     Public Sub ForceClearCart(feedback As Boolean, restock As Boolean)
