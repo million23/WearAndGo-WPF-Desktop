@@ -1,5 +1,6 @@
-# WearAndGo-WPF-Desktop
+# Wear and Go - WPF Desktop App
 Official Wear and Go Retail Desktop App
+
 
 Developed by:
 Million Creations
