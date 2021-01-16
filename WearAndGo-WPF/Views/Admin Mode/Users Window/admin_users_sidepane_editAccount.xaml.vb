@@ -1,6 +1,14 @@
 ﻿Imports System.Xml
 
 Public Class admin_users_sidepane_editAccount
+
+    Private Sub resizeWindow(sender As Object, e As SizeChangedEventArgs)
+        Dim actualH = My.Application.MainWindow.ActualHeight
+
+        _admin_users_sidepane_addAccount.scroller.Height = actualH - 150
+        _admin_users_sidepane_removeAccount.scroller.Height = actualH - 150
+        _admin_users_sidepane_editAccount.scroller.Height = actualH - 150
+    End Sub
     Private Sub updateAccount(sender As Object, e As RoutedEventArgs)
         Try
             If AccountUsernameSelect.Text <> "" Then

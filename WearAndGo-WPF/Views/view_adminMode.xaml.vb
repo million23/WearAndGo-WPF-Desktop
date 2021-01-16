@@ -12,6 +12,12 @@ Class view_adminMode
         _admin_home.Height = actualH - 40
         _admin_users.Width = actualW
         _admin_users.Height = actualH - 40
+        _admin_sales.Width = actualW
+        _admin_sales.Height = actualH - 40
+
+        _admin_users_sidepane_addAccount.scroller.Height = actualH - 150
+        _admin_users_sidepane_editAccount.scroller.Height = actualH - 150
+        _admin_users_sidepane_removeAccount.scroller.Height = actualH - 150
     End Sub
     Private Sub selectedPane(sender As ModernWpf.Controls.NavigationView, args As ModernWpf.Controls.NavigationViewItemInvokedEventArgs)
         Select Case mainNav.SelectedItem.Tag
