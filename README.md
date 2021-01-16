@@ -16,5 +16,6 @@ Carlo Diaz - Data Analyst and Tester
 
 <br/>
 <br/>
-***This application is for educational purposes only***
-***Compliance for the courses - Information Management and Programming Languages***
+<b>This application is for educational purposes only</b>
+<br/>
+<b>Compliance for the courses - Information Management and Programming Languages</b>
