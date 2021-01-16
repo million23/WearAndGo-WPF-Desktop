@@ -2,9 +2,12 @@
 
 <br/>
 Created by:
+<br/>
 Million Creations
 <br/>
+<br/>
 Team:
+<br/>
 Gerald Chavez - Lead Developer and Designer
 <br/>
 Kevin Corpin - Programmer and Designer
