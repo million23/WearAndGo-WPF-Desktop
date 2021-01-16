@@ -26,19 +26,20 @@ Class view_hero
         _datalist_users.Load(_datalist_users_path)
         Dim root As XmlNode = _datalist_users.DocumentElement
 
+        Dim dialog As New ContentDialog
+
         For Each user As XmlNode In root
             If emptb_username.Text = user.Attributes(2).Value AndAlso emptb_password.Password = user.Attributes(3).Value Then
                 My.Application.MainWindow.FindName("mainFrame").navigate(_view_adminMode)
                 My.Settings.activeUser = user.Attributes(1).Value
                 My.Settings.activeUserType = user.Attributes(0).Value
 
-                emptb_username.Text = ""
-                emptb_password.Password = ""
                 splitviewer.IsPaneOpen = False
-                Exit For
             End If
         Next
 
+        emptb_username.Text = ""
+        emptb_password.Password = ""
     End Sub
 
     Private Sub pageLoad(sender As Object, e As RoutedEventArgs)
