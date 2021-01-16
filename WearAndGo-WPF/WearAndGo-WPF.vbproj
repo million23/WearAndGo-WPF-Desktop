@@ -332,6 +332,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <None Include="bin\Debug\WearAndGo-WPF.application" />
+    <None Include="bin\Debug\WearAndGo-WPF.exe.config" />
+    <None Include="bin\Debug\WearAndGo-WPF.exe.manifest" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -381,6 +384,36 @@
     <Resource Include="bin\Debug\Data\itemlist_footwear.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Content Include="bin\Debug\app.publish\WearAndGo-WPF.exe" />
+    <Content Include="bin\Debug\Assets\intro.wav" />
+    <Content Include="bin\Debug\Assets\sw_expobannerfold.wav.wav" />
+    <Content Include="bin\Debug\Assets\sw_expobannerunfold.wav" />
+    <Content Include="bin\Debug\Assets\ui_whoosh_splashscreen_enter_c01.wav" />
+    <Content Include="bin\Debug\Assets\ui_whoosh_splashscreen_exit_c01.wav" />
+    <Content Include="bin\Debug\cs\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\de\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\es\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\fa\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\fr\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\it\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\ja\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\ko\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\ModernWpf.Controls.dll" />
+    <Content Include="bin\Debug\ModernWpf.dll" />
+    <Content Include="bin\Debug\Notifications.Wpf.dll" />
+    <Content Include="bin\Debug\pl\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\pt-BR\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\ru\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\Syncfusion.Compression.Base.dll" />
+    <Content Include="bin\Debug\Syncfusion.Licensing.dll" />
+    <Content Include="bin\Debug\Syncfusion.XlsIO.Base.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\tr\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\WearAndGo-WPF.exe" />
+    <Content Include="bin\Debug\WearAndGo-WPF.pdb" />
+    <Resource Include="bin\Debug\WearAndGo-WPF.xml" />
+    <Content Include="bin\Debug\zh-Hans\ModernWpf.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\ModernWpf.resources.dll" />
     <Content Include="Data\itemlist_accessory.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -427,6 +460,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\bin\Debug\Data\" />
     <Folder Include="bin\Debug\Data\Receipt\" />
   </ItemGroup>
   <ItemGroup>

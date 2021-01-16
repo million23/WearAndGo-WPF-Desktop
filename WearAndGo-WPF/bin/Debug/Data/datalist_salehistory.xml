@@ -46,4 +46,7 @@
     <item category="app" gender="men" id="MP1002" />
     <item category="app" gender="men" id="MP1003" />
   </sale>
+  <sale date="1/16/2021_8:46 PM" id="2021Y1M16D_1098335880" totalSale="450">
+    <item category="app" gender="men" id="MP1002" />
+  </sale>
 </saleHistory>
