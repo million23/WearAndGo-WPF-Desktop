@@ -1,27 +1,21 @@
-# Wear and Go - WPF Desktop App
-Official Wear and Go Retail Desktop App
+## Wear and Go - WPF Desktop App
 
-
-Developed by:
+<br/>
+Created by:
+<br/>
 Million Creations
-
+<br/>
 <br/>
 Team:
+<br/>
+Gerald Chavez - Lead Developer and Designer
+<br/>
+Kevin Corpin - Programmer and Designer
+<br/>
+Carlo Diaz - Data Analyst and Tester
 
 <br/>
 <br/>
-Lead Programmer and Lead Designer
+<b>This application is for educational purposes only</b>
 <br/>
-Gerald Chavez
-
-<br/>
-<br/>
-Programmer and Designer
-<br/>
-Kevin Corpin
-
-<br/>
-<br/>
-Data Analyst and Tester
-<br/>
-Carlo Diaz
+<b>Compliance for the courses - Information Management and Programming Languages</b>
